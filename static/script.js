@@ -136,17 +136,17 @@ function createRecommendationCard(rec, rank) {
         <div class="card-content">
             <div class="card-field">
                 <strong>图片类型：</strong>
-                <span class="chart-type">${escapeHtml(rec.图片类型 || '未指定')}</span>
+                <span class="chart-type">${escapeHtml(rec.chartType || '未指定')}</span>
             </div>
 
             <div class="card-field">
                 <strong>需求描述：</strong>
-                <p class="description">${escapeHtml(rec.需求描述 || '无描述')}</p>
+                <p class="description">${escapeHtml(rec.description || '无描述')}</p>
             </div>
 
             <div class="card-field">
                 <strong>实用场景：</strong>
-                <p class="scenario">${escapeHtml(rec.实用场景 || '无场景描述')}</p>
+                <p class="scenario">${escapeHtml(rec.useCase || '无场景描述')}</p>
             </div>
 
             <div class="card-reason">
@@ -159,6 +159,9 @@ function createRecommendationCard(rec, rank) {
             <div class="confidence-badge ${confidence.class}">
                 ${confidence.text}
             </div>
+            <a href="${getModuleUrl(rec.module)}" target="_blank" class="module-link">
+                查看模块详情 →
+            </a>
         </div>
     `;
 
@@ -182,6 +185,13 @@ function getConfidenceLevel(score) {
     if (score >= 0.7) return { text: '较好匹配', class: 'medium' };
     if (score >= 0.5) return { text: '一般匹配', class: 'low' };
     return { text: '低匹配度', class: 'very-low' };
+}
+
+// Get module URL based on module name
+function getModuleUrl(moduleName) {
+    // Convert FigureYa36nSurvV3 -> https://ying-ge.github.io/FigureYa/FigureYa36nSurvV3/FigureYa36nSurvV3.html
+    const baseUrl = 'https://ying-ge.github.io/FigureYa';
+    return `${baseUrl}/${moduleName}/${moduleName}.html`;
 }
 
 // Show error message

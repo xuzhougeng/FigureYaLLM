@@ -43,9 +43,9 @@ type RecommendationResponse struct {
 // ModuleRecommendation represents a recommended module
 type ModuleRecommendation struct {
 	Module      string  `json:"module"`
-	需求描述        string  `json:"需求描述"`
-	实用场景        string  `json:"实用场景"`
-	图片类型        string  `json:"图片类型"`
+	Description string  `json:"description"`
+	UseCase     string  `json:"useCase"`
+	ChartType   string  `json:"chartType"`
 	Score       float64 `json:"score"`
 	Reason      string  `json:"reason"`
 }
@@ -313,12 +313,12 @@ func (s *RecommendationService) parseLLMResponse(response string) ([]ModuleRecom
 	for _, rec := range parsed.Recommendations {
 		if module, exists := moduleMap[rec.Module]; exists {
 			recommendations = append(recommendations, ModuleRecommendation{
-				Module:   module.Module,
-				需求描述:     module.需求描述,
-				实用场景:     module.实用场景,
-				图片类型:     module.图片类型,
-				Score:    rec.Score,
-				Reason:   rec.Reason,
+				Module:      module.Module,
+				Description: module.需求描述,
+				UseCase:     module.实用场景,
+				ChartType:   module.图片类型,
+				Score:       rec.Score,
+				Reason:      rec.Reason,
 			})
 		}
 	}
@@ -333,20 +333,45 @@ func loadModules(filename string) ([]Module, error) {
 	}
 	defer file.Close()
 
-	var data DocumentData
+	var data map[string]interface{}
 	if err := json.NewDecoder(file).Decode(&data); err != nil {
 		return nil, err
 	}
 
-	// Filter modules with "ok" status
+	modules := data["modules"].([]interface{})
 	var validModules []Module
-	for _, module := range data.Modules {
-		if module.LLMStatus == "ok" {
-			validModules = append(validModules, module)
+
+	for _, moduleInterface := range modules {
+		moduleMap := moduleInterface.(map[string]interface{})
+
+		// Check if status is "ok"
+		if status, exists := moduleMap["llm_status"]; !exists || status != "ok" {
+			continue
 		}
+
+		// Extract fields with safe type assertions
+		module := Module{
+			Module:    getString(moduleMap, "module"),
+			需求描述:      getString(moduleMap, "需求描述"),
+			实用场景:      getString(moduleMap, "实用场景"),
+			图片类型:      getString(moduleMap, "图片类型"),
+			LLMStatus: getString(moduleMap, "llm_status"),
+		}
+
+		validModules = append(validModules, module)
 	}
 
 	return validModules, nil
+}
+
+// Helper function to safely extract string from map
+func getString(m map[string]interface{}, key string) string {
+	if val, exists := m[key]; exists {
+		if str, ok := val.(string); ok {
+			return str
+		}
+	}
+	return ""
 }
 
 func getEnv(key, defaultValue string) string {
