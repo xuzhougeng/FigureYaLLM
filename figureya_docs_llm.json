@@ -1,0 +1,4760 @@
+{
+  "generated_at": "2025-09-24T10:18:15.682700Z",
+  "modules": [
+    {
+      "module": "FigureYa1survivalCurve_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa1survivalCurve_update/FigureYa1survivalCurve_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12126
+        }
+      ],
+      "需求描述": "该模块旨在帮助用户使用自己的数据（而非TCGA自带数据）绘制生存曲线，支持两组或多组对比，解决用户自定义数据可视化的需求。",
+      "实用场景": "适用于生物医学研究中展示分类样本的生存曲线，需要至少包含结局和结局发生时间的数据列，并可添加分组信息进行组间比较。",
+      "图片类型": "生存曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa2ggtree+pheatmap+msa",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa2ggtree+pheatmap+msa/FigureYa2ggtree+pheatmap+msa.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 5562
+        }
+      ],
+      "需求描述": "该模块用于分别绘制基因家族成员进化树、表达谱聚类热图和多序列比对图，解决生物信息学中基因家族分析、表达模式可视化和序列相似性比较的需求。",
+      "实用场景": "典型应用包括：在RNA-seq数据分析中，通过热图聚类识别基因家族相关基因后，使用多序列比对验证未知功能基因的归属；或对新发现的转录因子进行序列比对和表达谱一致性检查，以推断其功能。",
+      "图片类型": "进化树,热图,多序列比对图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa3genomeView",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa3genomeView/FigureYa3genomeView.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 5408
+        }
+      ],
+      "需求描述": "该模块用于展示感兴趣的基因附近的ChIP-seq、DNase/ATAC-seq或RNA-seq的bigwig信号图，避免使用IGV或UCSC genome browser的截图，生成矢量图。",
+      "实用场景": "典型应用包括：使用DNase/ATAC-seq或组蛋白修饰ChIP-seq数据确认基因启动子和增强子位置；展示ChIP-seq数据识别转录因子调控；结合RNA-seq和ChIP-seq信号验证转录因子结合对基因转录的影响。",
+      "图片类型": "基因组信号图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa4bestSeparation",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa4bestSeparation/FigureYa4bestSeparation.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 5647
+        }
+      ],
+      "需求描述": "该模块旨在解决生存分析中如何基于基因表达水平（连续变量）找到最佳分组的问题，用户诉求是学习并实现Best separation的代码，以替代简单的中位值分组。",
+      "实用场景": "典型应用包括在生物医学研究中展示基因表达对生存期的影响时，自动寻找能最大化组间差异的分组方式，适用于需要精细分组以增强统计显著性的场景。",
+      "图片类型": "生存曲线,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa5bubbles",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa5bubbles/FigureYa5bubbles.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14655
+        }
+      ],
+      "需求描述": "该模块旨在模仿2016年Nature论文中的泡泡图，用于同时展示p值和表达量，帮助用户可视化生物医学数据中的关键调控关系。",
+      "实用场景": "典型应用包括展示motif的p值和对应转录因子的表达量，以识别在细胞状态改变中起关键调控作用的转录因子；或用于基因功能富集分析，展示通路的q值和基因数量。",
+      "图片类型": "泡泡图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa6rHRs",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa6rHRs/FigureYa6rHRs.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 11454
+        }
+      ],
+      "需求描述": "该模块用于在R中复现临床亚组分析的图形形式，帮助用户快速生成与学术论文相似的森林图，无需复杂计算过程。",
+      "实用场景": "适用于临床亚组分析，例如识别特定人群对药物的响应差异；也用于meta分析，展示经典的风险比和置信区间。",
+      "图片类型": "森林图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa7PSM",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa7PSM/FigureYa7PSM.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9482
+        }
+      ],
+      "需求描述": "该模块旨在快速实现病例组与对照组的1:1倾向得分匹配，要求性别相同且年龄差不超过两岁，以评估处置效应或治疗影响。",
+      "实用场景": "典型应用于癌症研究中，比较患者与一般人群的健康相关生活质量得分，通过匹配年龄和性别等特征来识别症状负担是否归因于治疗。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa8radar",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa8radar/FigureYa8radarChart.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10155
+        }
+      ],
+      "需求描述": "该模块旨在用R代码重现论文中的图形，提供标准化的可视化框架，简化绘图过程。",
+      "实用场景": "典型应用包括评估一个总体的不同组分的比例变化，以及评价同一衡量体系下的各项不同指标。",
+      "图片类型": "雷达图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa9heatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa9heatmap/FigureYa9heatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8145
+        }
+      ],
+      "需求描述": "该模块旨在用R代码绘制论文中的热图，帮助用户快速生成标准化的热图可视化。",
+      "实用场景": "典型应用包括评估样本间相关性以检查生物学重复的重复性或组间差异，以及进行基因表达变化聚类和样本聚类分析。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa10chromosomeV2_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa10chromosomeV2_update/FigureYa10chromosomeV2_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 7347
+        }
+      ],
+      "需求描述": "该模块用于使用R代码绘制论文中常见的直染色体分布图，帮助用户可视化基因组数据在染色体上的分布。",
+      "实用场景": "适用于展示差异表达基因、开放染色质、CTCF结合位点、突变位点或DNA甲基化在染色体上的分布，或仅绘制染色体示意图。",
+      "图片类型": "染色体分布图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa11bubble",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa11bubble/FigureYa11bubbles.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 6147
+        }
+      ],
+      "需求描述": "该模块用于使用R代码绘制基因功能富集分析的泡泡图，实现按对角线排列的视觉效果，以替代热图等其他图形。",
+      "实用场景": "典型应用包括展示基因功能富集分析的结果，以及进行多维度的数据信息可视化。",
+      "图片类型": "泡泡图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa12box",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa12box/FigureYa12box.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 7013
+        }
+      ],
+      "需求描述": "该模块旨在通过R代码绘制学术论文中的图形，特别是使用箱线图展示基因表达量分布，并自动计算和标注p值，以简化生物医学数据的可视化过程。",
+      "实用场景": "典型应用包括在生物医学研究中，比较不同阶段（如stage1、stage2、stage3）的基因表达差异，用于论文图表生成和数据分析。",
+      "图片类型": "箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa13GSEA_Java_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa13GSEA_Java_update/FigureYa13GSEA_Java_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12075
+        }
+      ],
+      "需求描述": "该模块旨在帮助用户基于Java版GSEA分析结果自定义绘制图形，解决用户无法直接使用GSEA软件内置绘图功能或需要个性化可视化的问题。",
+      "实用场景": "典型应用包括将多个GSEA通路结果整合到一张图中，用于生物医学研究中的数据解释和论文发表；适用于需要自定义图形样式或组合不同图形元素的场景。",
+      "图片类型": "点图,线图,条码图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa14circos",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa14circos/FigureYa14circos.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 19151
+        }
+      ],
+      "需求描述": "该模块旨在使用Circos工具绘制圆圈图，以展示基因组上的多种特征，如GC含量、基因密度、RPKM和SNP等，帮助用户快速生成论文所需的可视化图形。",
+      "实用场景": "典型应用包括展示基因组上多条染色体、单条染色体或多个基因的特征差异，以及比较不同细胞类型或人群的GC含量、基因表达量、DNA甲基化等特征。",
+      "图片类型": "环形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa15WGCNA",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa15WGCNA/FigureYa15WGCNA.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14401
+        }
+      ],
+      "需求描述": "用R代码画出WGCNA结果图，输出每个模块的基因表达谱，用于进一步绘制热图、功能富集分析或拟合表达谱曲线。",
+      "实用场景": "不需要筛选差异表达基因，直接从全基因组找表达谱相似的基因组成的模块，尤其适合样本量超过15的高通量测序数据。用于研究表型差异由哪些基因决定，如找出决定不同发育阶段、疾病亚型或药物处理反应的关键基因模块，进而鉴定新的生物标志物或治疗靶标。",
+      "图片类型": "聚类树图,模块颜色图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa16fitting",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa16fitting/FigureYa16WGCNA_fitting.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 5690
+        }
+      ],
+      "需求描述": "该模块用于在WGCNA得到基因模块后，使用模块内基因的表达量绘制拟合曲线，以展示基因表达的趋势变化。",
+      "实用场景": "典型应用包括分析WGCNA模块内基因的时间序列变化趋势，或聚类分析得到的cluster内基因的表达趋势，适用于时间序列数据。",
+      "图片类型": "拟合曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa17WGCNA_heatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa17WGCNA_heatmap/FigureYa17WGCNA_heatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 5107
+        }
+      ],
+      "需求描述": "该模块用于使用R代码绘制论文中WGCNA模块的热图，展示基因模块的表达谱变化。",
+      "实用场景": "适用于WGCNA分析后，需要可视化各基因模块在不同样本组中的表达模式，以辅助生物医学数据解释。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa18oncoplot_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa18oncoplot_update/FigureYa18oncoplot_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10368
+        }
+      ],
+      "需求描述": "该模块旨在使用R代码绘制类似论文中的瀑布图（oncoplot），以可视化多个样本中多个基因的突变情况，包括SNP、indel和CNV等类型。",
+      "实用场景": "典型应用包括作为全基因组或全外显子组测序文章的第一个图，展示大样本量下基因突变分布；或用于特定癌症类型中某个通路基因的突变分析。",
+      "图片类型": "瀑布图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa19Lollipop",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa19Lollipop/FigureYa19Lollipop.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10000
+        }
+      ],
+      "需求描述": "该模块旨在使用R代码绘制论文中的棒棒糖图（Lollipop plot），以可视化基因突变位点及其在蛋白质结构域中的分布。",
+      "实用场景": "典型应用包括展示TCGA癌症数据中特定基因的突变位点，以及比较不同癌症类型或亚型的突变位点差异，帮助推测突变对蛋白质功能的影响。",
+      "图片类型": "棒棒糖图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa20mortality",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa20mortality/FigureYa20mortalityV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 5433
+        }
+      ],
+      "需求描述": "该模块旨在使用R代码重现论文中的图形，具体解决如何根据肿瘤大小分组，以存活时间作为输入计算死亡率，并展示死亡率与肿瘤大小的关系。",
+      "实用场景": "典型应用包括在生物医学研究中，根据肿瘤大小对患者进行分组，分析死亡率或转移率与肿瘤大小的关联，适用于临床数据可视化和生存分析。",
+      "图片类型": "线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa21TCGA2table",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa21TCGA2table/FigureYa21TCGA2table.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13772
+        }
+      ],
+      "需求描述": "该模块旨在通过R代码直接绘制三线表，用于处理和可视化TCGA临床数据，简化数据分析和报告生成过程。",
+      "实用场景": "典型应用包括基于TCGA临床数据，按年龄、性别、种族等特征进行分类对比，以探索疾病、癌症发病、转移和耐药性的关系。",
+      "图片类型": "三线表",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa22FPKM2TPM",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa22FPKM2TPM/FigureYa22FPKM2TPM.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 4792
+        }
+      ],
+      "需求描述": "该模块用于将RNA-seq的FPKM表达量转换为TPM表达量，转换过程考虑了基因长度，比从read count转换更快捷方便。",
+      "实用场景": "适用于RNA-seq基因表达数据为FPKM格式且需要转换为TPM的场景，不限于TCGA数据，常用于生物医学研究中的基因表达标准化分析。",
+      "图片类型": "无",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa23count2TPM",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa23count2TPM/FigureYa23count2TPMv2.Rmd",
+          "title": "需求描述",
+          "size_bytes": 20948
+        }
+      ],
+      "需求描述": "该模块用于将RNA-seq的read count数据转换为TPM（Transcripts Per Million）值，以标准化基因表达量。",
+      "实用场景": "适用于用户只有RNA-seq的read count数据，但需要TPM值进行下游分析，如差异表达分析或数据比较。",
+      "图片类型": "无图形产出",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa24ROC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa24ROC/FigureYa24ROC.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 5313
+        }
+      ],
+      "需求描述": "该模块用于在R中绘制ROC曲线，以直观展示分类任务中敏感性和特异性的综合指标。",
+      "实用场景": "典型应用包括比较多个生物标志物或临床参数的诊断表现，以及比较多个算法的分类效果。",
+      "图片类型": "ROC",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa25Sankey_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa25Sankey_update/FigureYa25Sankey_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10494
+        }
+      ],
+      "需求描述": "该模块用于使用R代码绘制论文中的图形，特别是展示多层属性之间的交叉关系。",
+      "实用场景": "典型应用包括展示高频突变基因的分组分布、miRNA与靶基因的关系，以及人群特征与癌症规律的关联。",
+      "图片类型": "桑基图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa26circos_R",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa26circos_R/FigureYa26circos_R.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13527
+        }
+      ],
+      "需求描述": "该模块旨在使用R代码重现论文中的图形，特别是通过圆圈和连线展示多个亚组之间的关系，如基因融合或调控关系。",
+      "实用场景": "适用于展示基因融合（如肿瘤基因组DNA测序数据）或基因间的正负调控关系，使组间关系一目了然。",
+      "图片类型": "环形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa27tSNE_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa27tSNE_update/FIgureYa27tSNE_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 18081
+        }
+      ],
+      "需求描述": "该模块旨在使用R语言绘制单细胞RNA-seq数据的t-SNE图，帮助用户解决R包安装和数据预处理中的常见问题，并输出细胞分类和候选标记基因。",
+      "实用场景": "典型应用包括单细胞测序中识别细胞亚群和寻找标记基因，以及肿瘤样本中识别亚型和甲基化亚型分类。",
+      "图片类型": "t-SNE散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa28color",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa28color/FigureYa28color.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9703
+        }
+      ],
+      "需求描述": "该模块旨在解决用户在学术论文中为图表选择配色方案时的不确定性，通过从心仪的论文中提取配色方案，帮助用户快速获得美观且协调的颜色。",
+      "实用场景": "典型应用包括在生物医学研究中为生存曲线、热图、ROC曲线等图表统一配色，或模仿导师或权威论文的视觉风格以提升图表专业性。",
+      "图片类型": "生存曲线,热图,ROC,散点图,箱线图,PCA,环形图,桑基图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa30nomogram_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa30nomogram_update/FigureYa30nomogram_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12260
+        }
+      ],
+      "需求描述": "该模块旨在绘制新型列线图（nomogram）和对比曲线，用于可视化Logistic回归或Cox回归结果，预测患者发病风险或比例风险。",
+      "实用场景": "典型应用于生物医学研究，如基于肿瘤微环境风险评分和临床变量预测患者死亡率概率，以及评估列线图的校准性能。",
+      "图片类型": "列线图,校准曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa31lasso_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa31lasso_update/FigureYa31lasso_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12474
+        }
+      ],
+      "需求描述": "该模块用于绘制LASSO回归图，展示基因系数随正则化参数的变化，并输出纳入signature的基因顺序和系数。同时，将选中的基因拟合成一个变量，作为nomogram的输入。",
+      "实用场景": "适用于在筛选差异基因后，进一步筛选有预后意义的基因，构建基因表达signature。特别适合处理高维度、强相关、小样本的生存数据。",
+      "图片类型": "LASSO回归图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa32ID_table",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa32ID_table/FigureYa32ID_table.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9380
+        }
+      ],
+      "需求描述": "该模块用于从基因表达矩阵中提取指定基因列表的表达量，并输出为CSV文件，作为后续分析的输入。",
+      "实用场景": "典型场景包括：GO富集分析后提取GO term中基因的表达矩阵；或基于已分类基因列表提取相应表达矩阵，以便进行热图、箱线图等可视化分析。",
+      "图片类型": "热图,箱线图,表达谱曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa33DCA_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa33DCA_update/FigureYa33DCA_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8900
+        }
+      ],
+      "需求描述": "该模块用于绘制论文中的DCA曲线，帮助用户可视化决策曲线分析结果，以评估预测模型在临床决策中的净收益。",
+      "实用场景": "适用于生存数据分析，特别是在队列研究中，通过opt-in和opt-out选择来识别高风险患者进行干预、低风险患者避免过度医疗，提升临床决策效率。",
+      "图片类型": "DCA曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa34count2FPKMv2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa34count2FPKMv2/FigureYa34count2FPKMv2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12522
+        }
+      ],
+      "需求描述": "该模块用于将RNA-seq的read count数据转换为FPKM值，解决用户需要标准化表达量以进行后续分析的需求。",
+      "实用场景": "适用于用户只能获取RNA-seq的read count数据，但需要FPKM值进行基因表达比较或可视化的场景，例如在TCGA数据分析中。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa35batch_bestSeparationV3_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa35batch_bestSeparationV3_update/FigureYa35batch_bestSeparationV3_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 11514
+        }
+      ],
+      "需求描述": "该模块用于批量绘制生存分析中最佳分离的图，筛选p值小于0.05的基因，并在图上标注HR、p值和95%置信区间。同时，设置分组cutoff以确保组内样本数量不低于30%，并绘制生存曲线和事件发生率曲线。",
+      "实用场景": "适用于展示基因表达水平对生存期影响时找到最佳分组，支持多个基因批量出图，常用于生物医学研究中的生存分析。后续可与双因子生存分析模块结合，比较基因组合对预后的影响。",
+      "图片类型": "生存曲线,事件发生率曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa36nSurvV3",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa36nSurvV3/FigureYa36nSurvV3.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9343
+        }
+      ],
+      "需求描述": "该模块用于使用R语言绘制双因子生存分析图并计算p值，解决用户需要可视化两个因素（如基因表达）对生存率影响的需求。",
+      "实用场景": "典型应用包括比较两个基因（如AKAP12和MAP2K6）表达水平高低组合对患者生存期的影响，例如分析高表达基因A和B是否比低表达组合生存期更长。",
+      "图片类型": "生存曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa37correlationV2_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa37correlationV2_update/FigureYa37correlationV2_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10685
+        }
+      ],
+      "需求描述": "该模块旨在使用圆圈（⭕️）方式展示基因之间的相关性，绘制类似学术论文中的图形，以直观呈现相关系数。",
+      "实用场景": "典型应用包括展示每两个基因之间的相关关系，其中连线的颜色和宽度代表相关系数；还可用于从TCGA数据中挖掘相关基因或寻找转录因子的靶基因。",
+      "图片类型": "环形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa38PCA",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa38PCA/FigureYa38PCA.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16041
+        }
+      ],
+      "需求描述": "该模块用于使用TCGA数据绘制主成分分析（PCA）图，以可视化高维数据的降维结果，帮助用户识别样品间的相似性和分组模式。",
+      "实用场景": "适用于转录组等高维数据的降维可视化，典型场景包括检测样品异常（如远离组内其他样品）和识别批次效应（如同批次样品聚集）。",
+      "图片类型": "PCA",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa39bar",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa39bar/FigureYa39bar.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10545
+        }
+      ],
+      "需求描述": "该模块用于生成条形图，以不同颜色区分不同类别（如癌症类型），并支持处理极端值和显著性标记。",
+      "实用场景": "适用于比较各肿瘤的指标（如缓解率）和展示GO、KEGG富集分析结果，其中不显著项显示为灰色。",
+      "图片类型": "条形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa40lineage",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa40lineage/FigureYa40lineage.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 26621
+        }
+      ],
+      "需求描述": "该模块旨在使用R语言重现特定文章中的细胞谱系分析图，解决用户需要可视化单细胞测序数据中细胞拟时间排列的需求。",
+      "实用场景": "典型应用于单细胞测序数据的细胞谱系分析，展示细胞在二维状态空间的拟时间排列，用于研究细胞分化或状态转变过程。",
+      "图片类型": "细胞谱系图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa41GEO2lncRNA_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa41GEO2lncRNA_update/FigureYa41GEO2lncRNA_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 22257
+        }
+      ],
+      "需求描述": "该模块旨在从GEO数据库下载芯片数据，并基于Ensembl的BioMart注释，从基因表达矩阵中提取lncRNA、mRNA和miRNA的表达矩阵。",
+      "实用场景": "典型应用包括计算lncRNA、miRNA和mRNA间的相关性以识别靶基因或推测lncRNA功能；设计RNA-seq实验前参考他人数据；以及当TCGA数据样本不足时，从GEO获取补充数据。",
+      "图片类型": "无",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa42oncoprintV2_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa42oncoprintV2_update/FigureYa42oncoprintV2_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 17715
+        }
+      ],
+      "需求描述": "该模块用于基于01矩阵或多种变异类型的基因变异数据，结合临床信息，生成oncoprint图，并按pathway对基因进行分组展示。",
+      "实用场景": "典型应用包括展示多个样本中多个基因的变异情况，如从基因检测报告中收集的变异基因（场景一）或外显子测序数据中的多种变异类型（场景二），并可整合临床信息如人种、病史等。",
+      "图片类型": "oncoprint",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa43ManhattanV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa43ManhattanV2/FigureYa43ManhattanV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10925
+        }
+      ],
+      "需求描述": "该模块用于绘制论文中的曼哈顿图，并优化文字标签的美观性。",
+      "实用场景": "展示每条染色体上的SNP分布，通常作为外显子组测序文章中的第一个图。",
+      "图片类型": "曼哈顿图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa44profile",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa44profile/FigureYa44profile.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14323
+        }
+      ],
+      "需求描述": "该模块用于使用R语言绘制两个样品对比的profile图，解决用户需要可视化比较不同样品在特定区域信号特征的需求。",
+      "实用场景": "典型应用包括对比ChIP-seq、DNase-seq或ATAC-seq数据中不同样品在基因体、CpG岛等功能区域的信号强度，例如观察转录起始位点、转录终止位点或增强子区的信号分布。",
+      "图片类型": "profile图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa45V2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa45V2/FigureYa45iClusterV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 27216
+        }
+      ],
+      "需求描述": "该模块旨在解答iCluster分析过程中的问题，并输出分类和特征基因，用于绘制论文中的热图。",
+      "实用场景": "适用于整合多种基因组数据（如突变、拷贝数变异、表达数据）进行肿瘤亚型识别，特别是在生物医学研究中需要多组学数据整合分析的场景。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa47HRtable",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa47HRtable/FigureYa47HRtable.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15696
+        }
+      ],
+      "需求描述": "该模块用于计算Cox比例风险模型中的单因素和多因素分析，输出风险比（HR）和置信区间等统计结果，并以表格形式呈现。",
+      "实用场景": "适用于分析临床因素和基因表达对疾病发病或预后的影响，典型应用包括处理TCGA数据或大规模临床试验数据。",
+      "图片类型": "表格",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa48Adonis",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa48Adonis/FigureYa48Adonis.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 6832
+        }
+      ],
+      "需求描述": "该模块用于进行置换多元方差分析（PERMANOVA，Adonis），以评估不同分组或环境因子对样品差异的解释度，并生成相应的条形图来可视化分析结果。",
+      "实用场景": "典型应用包括分析宿主临床表型对肠道微生物变化的影响，或评估其他环境因子在生物多样性研究中的贡献。",
+      "图片类型": "条形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa51TMB_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa51TMB_update/FigureYa51TMB_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8808
+        }
+      ],
+      "需求描述": "该模块用于根据特定基因的表达量对样本进行分组，绘制各组的TMB箱线图并添加散点，同时计算组间TMB差异的p值。",
+      "实用场景": "典型应用包括利用TMB数据将基因表达与免疫治疗预后关联，例如通过基因表达高低分组比较TMB值差异，或进一步基于TMB分组进行生存分析。",
+      "图片类型": "箱线图,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa52GOplot",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa52GOplot/FigureYa52GOplot.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 26158
+        }
+      ],
+      "需求描述": "该模块旨在帮助用户将clusterProfiler的富集分析结果与GOplot可视化工具衔接，解决用户不知道如何将两者结合的问题。通过自动转换数据格式，实现从富集分析到图形展示的完整流程。",
+      "实用场景": "适用于生物医学研究中需要进行功能富集分析并可视化结果的场景，例如使用GO、KEGG等注释库分析差异表达基因。典型用户为希望用clusterProfiler做分析并用GOplot画图但缺乏衔接经验的研究人员。",
+      "图片类型": "环形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa53PPImodule",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa53PPImodule/FigureYa53PPImodule.rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15232
+        }
+      ],
+      "需求描述": "该模块通过已知PPI数据库找到共表达蛋白中的模块，并输出到文件，用于下一步Cytoscape展示。",
+      "实用场景": "典型应用包括将RNA-seq获得的差异表达基因列表与蛋白相互作用网络联系起来，识别哪些基因处于同一模块。",
+      "图片类型": "网络图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa55panCancer_violinV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa55panCancer_violinV2/FigureYa55panCancer_violinV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15382
+        }
+      ],
+      "需求描述": "该模块旨在解决TCGA数据库中正常组织样本数量不足的问题，通过整合GTEx的正常组织数据，使用分裂小提琴图展示特定基因在TCGA肿瘤组织和正常组织中的表达差异。",
+      "实用场景": "适用于比较某一基因在TCGA肿瘤组织和正常组织（包括TCGA和GTEx来源）的基因表达量TPM值，常用于生物医学研究中基因表达差异的可视化分析。",
+      "图片类型": "分裂小提琴图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa55plus_pancancer_boxplot",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa55plus_pancancer_boxplot/FigureYa55plus_pancancer_boxplot.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8433
+        }
+      ],
+      "需求描述": "该模块旨在将FigureYa55pancancer_violin的图形从violin plot转换为box plot，并提供无缝对接，允许用户直接使用easy_input.csv文件作为输入。",
+      "实用场景": "典型应用包括在生物医学研究中，比较33种癌症中肿瘤与正常组织（使用GTEx数据作为对照）的基因表达差异，适用于需要可视化多癌症数据并标注统计显著性的场景。",
+      "图片类型": "箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa56immune_inflitrationV3",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa56immune_inflitrationV3/FigureYa56immune_inflitrationV3.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 25764
+        }
+      ],
+      "需求描述": "该模块使用TCGA的表达数据计算免疫浸润，并绘制论文中的热图。",
+      "实用场景": "适用于深入挖掘肿瘤RNA-seq数据，建立与免疫的联系，支持人类组织或血液的表达数据分析。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa57profile_1bw",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa57profile_1bw/FigureYa57profile_1bw.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 7133
+        }
+      ],
+      "需求描述": "该模块用于输入一个bigWig文件和多个BED文件，生成论文中展示的图形，以可视化多个区域在同一个样本中的信号特征。",
+      "实用场景": "典型应用包括比较同一样本中不同区域的信号强度差异，例如展示高CpG和低CpG区域的ChIP-seq信号特征。",
+      "图片类型": "线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa58lncRNAreannotation",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa58lncRNAreannotation/FigureYa58lncRNAreannotation.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 19237
+        }
+      ],
+      "需求描述": "该模块用于对GEO芯片进行lncRNA的重新注释，提取芯片中lncRNA的表达量，解决旧芯片注释无法直接获取lncRNA表达数据的问题。",
+      "实用场景": "典型应用包括从芯片数据中筛选可靠的lncRNA用于研究，或分析特定lncRNA的表达谱及其与上下游基因的相关性。同样适用于蛋白编码基因和miRNA芯片的重注释。",
+      "图片类型": "散点图,箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa59Plus_GEO2DEG",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa59Plus_GEO2DEG/FigureYa59Plus_GEO2DEG.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15602
+        }
+      ],
+      "需求描述": "该模块用于从GEO数据库下载芯片数据，筛选差异表达基因，并无缝对接FigureYa59volcano模块绘制火山图。",
+      "实用场景": "适用于处理GEO数据库中的芯片数据，进行差异表达基因分析和可视化。",
+      "图片类型": "火山图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa59volcanoV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa59volcanoV2/FigureYa59volcanoV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9251
+        }
+      ],
+      "需求描述": "该模块旨在绘制美观的火山图，类似于学术论文中的高质量图形，帮助用户可视化基因表达差异分析结果。",
+      "实用场景": "典型应用包括展示两组样本之间基因表达变化的总体趋势，例如在生物医学研究中突出显示差异表达基因。",
+      "图片类型": "火山图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa60GSEA_clusterProfilerV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa60GSEA_clusterProfilerV2/FigureYa60GSEA_clusterProfilerV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15983
+        }
+      ],
+      "需求描述": "该模块旨在使用clusterProfiler的GSEA结果作为输入，生成美观的GSEA结果图，类似于学术论文中的高质量可视化效果。",
+      "实用场景": "适用于在单张图上对比多个通路，或对同一通路进行多组间比较，常用于生物医学研究中富集分析结果的展示。",
+      "图片类型": "GSEA图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa61GSVA",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa61GSVA/FigureYa61GSVA.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 11435
+        }
+      ],
+      "需求描述": "该模块用于模拟论文方法进行GSVA分析，将结果保存为文件，并作为FigureYa39bar的输入文件来绘制条形图。",
+      "实用场景": "典型应用包括将基因表达矩阵转化为通路表达矩阵，使用limma包进行通路差异分析，识别样本间显著差异的通路，用于肿瘤亚型分型等生物学意义探究。",
+      "图片类型": "条形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa62twoAxis",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa62twoAxis/FigureYa62twoAxis.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12803
+        }
+      ],
+      "需求描述": "该模块用于复现文献中的线性回归分析，并绘制双坐标轴图形，以同时展示两组数据与同一变量的相关性。",
+      "实用场景": "典型应用于生物医学研究，例如同时分析基因表达与miRNA及DNA甲基化的相关性，帮助解释多因素调控机制。",
+      "图片类型": "散点图,线性回归图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa63pubmedMiningV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa63pubmedMiningV2/FigureYa63pubmedMiningV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 17141
+        }
+      ],
+      "需求描述": "该模块通过API检索NCBI的Pubmed数据库，批量获取文章信息，并整理摘要中基因的词频，帮助用户快速了解目标基因的相关研究。",
+      "实用场景": "典型应用包括：当用户对陌生基因不熟悉时，通过代码快速找出其相关基因和文献；在文章写作或实验设计卡壳时，利用摘要词频分析发现潜在的研究方向或合作分子。",
+      "图片类型": "散点图,词云",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa64triangle",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa64triangle/FigureYa64triangle.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12639
+        }
+      ],
+      "需求描述": "该模块用于使用R语言绘制论文中的Triangle plot，解决用户需要可视化三种不同疾病或三组之间指标相关性的需求。",
+      "实用场景": "典型应用包括展示三种疾病亚型（如原发性GBM、继发性GBM和低级别胶质瘤）中基因突变频率的相关性，也可拓展到其他三组数据的比较分析。",
+      "图片类型": "三元图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa65SVM",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa65SVM/FigureYa65SVM.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 11556
+        }
+      ],
+      "需求描述": "该模块利用SVM-RFE和LASSO逻辑回归进行特征变量筛选，旨在重现原文方法，构建最佳分类模型。",
+      "实用场景": "主要用于生物医学数据分析中筛选特征变量，适用于机器学习模型的特征选择和分类任务。",
+      "图片类型": "LASSO图,SVM错误率图,SVM准确率图,Venn图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa66单因素cox",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa66单因素cox/FigureYa66单因素cox.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 21338
+        }
+      ],
+      "需求描述": "该模块用于进行单基因Cox比例风险回归分析，计算风险比（HR）并生成类似学术论文中的可视化图形。分析结果可作为FigureYa6森林图的输入数据。",
+      "实用场景": "主要用于肿瘤等慢性疾病的预后分析，探索单个基因的独立预后影响。适用于转录组、甲基化、miRNA、LncRNA等生物医学数据的队列研究。",
+      "图片类型": "森林图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa67phastCons",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa67phastCons/FigureYa67phastCons.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16492
+        }
+      ],
+      "需求描述": "该模块用于输入UCSC的phastCons文件和ChIP-seq的peak bed文件，通过R或Python计算数值，并用R绘制保守性分布图。",
+      "实用场景": "展示特定区域的保守性，例如转录因子结合位点等重要区域，这些区域通常具有较高的保守性。",
+      "图片类型": "保守性分布图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa68friendsV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa68friendsV2/FigureYa68friendsV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 21828
+        }
+      ],
+      "需求描述": "该模块输入基因列表，利用GO注释的相似性寻找功能相似的基因（即“好朋友”），并绘制云雨图。",
+      "实用场景": "适用于生物信息学分析中，从差异表达基因或互作蛋白中筛选重要基因（如hub基因），例如在富集分析后进一步量化基因间关联程度。",
+      "图片类型": "云雨图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa69cancerSubtype",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa69cancerSubtype/FigureYa69cancerSubtype.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 25037
+        }
+      ],
+      "需求描述": "该模块旨在输入TCGA数据，复现原图，用于癌症分子分型鉴定。通过整合多组学数据，使用共识聚类等方法识别癌症亚型。",
+      "实用场景": "典型应用包括使用SNFCC、HC和NMF算法进行癌症分子分型比较，适用于基因组数据分析，如mRNA和miRNA表达数据的整合聚类。",
+      "图片类型": "共识聚类图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa70mutationEvents",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa70mutationEvents/FigureYa70mutationEvents.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 27012
+        }
+      ],
+      "需求描述": "该模块用于进行基因突变数据的共现与互斥分析，通过DISCOVER方法识别显著的共现或互斥关系，并生成可视化图形。",
+      "实用场景": "典型应用包括使用TCGA的基因突变数据（如乳腺癌BRCA）分析基因间的共现或互斥模式，适用于癌症基因组学研究。",
+      "图片类型": "相关性矩阵图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa71ssGSEA_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa71ssGSEA_update/FigureYa71ssGSEA_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 39179
+        }
+      ],
+      "需求描述": "该模块旨在输入TCGA数据，使用原文方法计算并复现原图，主要解决用户对免疫细胞浸润水平进行量化分析的需求。",
+      "实用场景": "典型应用包括量化肿瘤浸润免疫细胞，如使用ssGSEA方法定制免疫细胞类型，适用于TCGA等转录组数据分析。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa72biomarker",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa72biomarker/FigureYa72biomarker.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 22536
+        }
+      ],
+      "需求描述": "该模块旨在复现原文中通过最近收缩质心分类方法寻找生物标志物的过程，并绘制相关图形。",
+      "实用场景": "典型应用包括癌症分型中生物标志物的发现，如基于DNA甲基化或基因表达数据区分肿瘤与正常组织。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa73batchCorrelation",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa73batchCorrelation/FigureYa73batchCorrelation.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13897
+        }
+      ],
+      "需求描述": "该模块用于输入TCGA表达矩阵，按指定方法计算一个基因与多个基因的相关系数和p值，并绘制相关图形。支持可选的分组（bin）处理方式，以批量筛选与目标基因呈正/负相关的基因。",
+      "实用场景": "适用于基因表达相关性分析，如批量筛选与感兴趣基因相关的基因；也可用于转录因子结合（ChIP）与靶基因变化倍数（RNA-seq）的相关性分析，通过替换基因信息为位点信息实现。在处理ChIP-seq、ATAC-seq或DNA甲基化等大量位点数据时，可采用分组方式绘图以提高效率。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa74OmicCircos",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa74OmicCircos/FigureYa74OmicCircos.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 19902
+        }
+      ],
+      "需求描述": "该模块旨在用R语言复现学术文章中的环形基因组图，帮助用户快速重现和自定义生物医学数据可视化。",
+      "实用场景": "典型应用包括可视化基因组变异，如突变模式、拷贝数变异、表达模式和甲基化模式，适用于多组学数据整合分析。",
+      "图片类型": "环形图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa75bubble_volcano",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa75bubble_volcano/FigureYa75bubble_volcano.Rmd",
+          "title": "设置knitr的全局代码块选项 / Set global chunk options for knitr",
+          "size_bytes": 11541
+        }
+      ],
+      "需求描述": "该模块旨在使用R的base plot功能绘制美观的火山图，解决用户对基因或其他特征数据可视化展示的需求。",
+      "实用场景": "典型应用包括基因表达分析，用于同时展示多个特征如P值、调整P值、分组、大小和分数等，例如在富集分析结果中可视化显著通路。",
+      "图片类型": "火山图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa76corrgram",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa76corrgram/FigureYa76corrgram.Rmd",
+          "title": "设置knitr代码块的全局选项 / Set global options for knitr code chunks",
+          "size_bytes": 6519
+        }
+      ],
+      "需求描述": "该模块旨在用R语言复现原图的形式，通过计算和展示数据集中每两列之间的相关性，同时显示相关系数和原始数据分布。",
+      "实用场景": "典型应用包括在数据分析中同时展示多个变量之间的相关系数热图和散点图，适用于探索性数据分析、相关性可视化等场景。",
+      "图片类型": "相关矩阵图,散点图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa77baseZoom",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa77baseZoom/FigureYa77baseZoom.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12732
+        }
+      ],
+      "需求描述": "该模块旨在使用基础绘图功能绘制具有缩放效果的C图，解决点分布不均匀时难以标记标签的问题。通过同时展示整体和局部视图，使堆叠的点清晰可见。",
+      "实用场景": "适用于生物医学数据可视化，如展示多个基因在两组中各变异类型所占百分比，用颜色表示变异类型、泡泡大小表示p值。典型场景包括乳腺癌基因突变分析，其中泡泡位置指示IDC与ILC中的占比差异。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa78gganatogram",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa78gganatogram/FigureYa78gganatogram.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13254
+        }
+      ],
+      "需求描述": "该模块旨在利用gganatogram包，基于基因表达数据（如TPM值）绘制基因在不同器官中的表达分布图，以直观展示基因表达的空间模式。",
+      "实用场景": "典型应用于生物医学研究，如分析TCGA和GTEx数据库中的基因表达数据，比较肿瘤与正常组织间的表达差异，或探索基因在人体器官中的特异性表达。",
+      "图片类型": "器官分布图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa79CNV",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa79CNV/FigureYa79CNV.Rmd",
+          "title": "设置knitr代码块的全局选项 / Set global options for knitr code chunks",
+          "size_bytes": 57536
+        }
+      ],
+      "需求描述": "该模块旨在DIY绘制对比多个亚型的复合拷贝数变异图谱，解决用户无法直接使用GISTIC工具生成亚型特异性图谱的问题，允许灵活绘制Gistic分数和百分比/频率。",
+      "实用场景": "典型应用包括在癌症研究中比较不同分子亚型的拷贝数变异，例如食管癌的EAC、ESCC等亚型对比；适用于需要自定义图形参数或分析特定亚组的研究场景。",
+      "图片类型": "拷贝数变异图谱",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa80GOclustering",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa80GOclustering/FigureYa80GOclustering.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16242
+        }
+      ],
+      "需求描述": "该模块旨在解决富集分析产生过多相似GO term的问题，通过计算GO term之间的语义相似性，合理合并冗余项，并结合背景知识概括出代表性pathway。",
+      "实用场景": "适用于多组GO富集分析结果的对比，以及需要精简和归纳大量相似功能类别的生物医学研究场景。",
+      "图片类型": "系统发生树,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa81immune_network",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa81immune_network/FigureYa81immune_network.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 24849
+        }
+      ],
+      "需求描述": "该模块旨在复现免疫细胞之间相关性的网络图，通过节点和连线的视觉属性展示细胞聚类、生存分析结果和相关性信息。",
+      "实用场景": "典型应用包括展示免疫细胞或基因表达数据中的相关性、聚类结果、p值及与预后的关系，适用于生物医学研究中的多维度数据可视化。",
+      "图片类型": "网络图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa82IGVzoom",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa82IGVzoom/FigureYa82IGVzoom.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 17768
+        }
+      ],
+      "需求描述": "用户通过在线工具找到调控基因的转录因子后，不想使用截屏，而是希望自定义绘制矢量图。该模块使用R语言生成类似IGV（Integrative Genomics Viewer）缩放效果的信号分布图，以替代在线工具的静态图像。",
+      "实用场景": "典型应用包括同时展示某一基因组区域内的多种测序信号，如ChIP-seq、ATAC-seq、DNase-seq、RNA-seq和GRO-seq等。该模块基于Sushi包，优势在于不依赖特定物种的基因组文件，处理速度快，适用于多组学数据的可视化整合。",
+      "图片类型": "基因组信号分布图,缩放图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa83enrichment",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa83enrichment/FigureYa83enrichment.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 22030
+        }
+      ],
+      "需求描述": "该模块通过Fisher精确检验分析转录因子之间的耦合关系，识别基因列表中的显著关联，并以类似论文中的图形形式展示结果。",
+      "实用场景": "典型应用包括分析转录因子间的共调控关系、差异表达基因在通路中的富集分析，以及染色质开放程度与基因转录调控的关联研究。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa84roast",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa84roast/FigureYa84roast.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 11889
+        }
+      ],
+      "需求描述": "该模块旨在帮助用户使用自定义基因集进行富集分析，通过ROAST方法检验基因集是否在差异表达数据中显著富集，并生成barcode plot可视化结果。",
+      "实用场景": "适用于微阵列或RNA-seq表达数据，在无需筛选差异表达基因的情况下，分析特定通路、GO术语或文献中基因集的富集情况。",
+      "图片类型": "barcode plot",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa85timeROC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa85timeROC/FigureYa85timeROC.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9217
+        }
+      ],
+      "需求描述": "该模块用于绘制不同拟合模型的时间依赖型AUC曲线，以比较模型在预测生存结局时的性能随时间变化。",
+      "实用场景": "适用于生物医学研究中的生存分析，例如评估多个预测指标（如基因表达或临床变量）在竞争风险或删失数据下的诊断准确性。",
+      "图片类型": "时间依赖型ROC曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa86SNPmotif",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa86SNPmotif/FigureYa86SNPmotif.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 11775
+        }
+      ],
+      "需求描述": "该模块用于判断突变是否影响转录因子结合，并同时绘制motif logo和SNP图，提供可视化和量化证据。",
+      "实用场景": "在基因组研究中，同时展示突变位点和motif，为突变影响转录因子结合提供p值、score等量化证据，适用于生物医学论文的数据充实和可视化。",
+      "图片类型": "motif logo, SNP图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa87fish",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa87fish/FigureYa87fish.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13255
+        }
+      ],
+      "需求描述": "该模块用于使用R语言绘制肿瘤克隆进化的图形，展示克隆群在不同时间节点的比例变化和演化关系。",
+      "实用场景": "典型应用包括创建时间进程的鱼图，显示肿瘤克隆架构的变化，如白血病克隆演化分析，适用于生物医学研究中克隆进化数据的可视化。",
+      "图片类型": "鱼图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa88DAVIDkappa",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa88DAVIDkappa/FigureYa88DAVIDkappa.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 19065
+        }
+      ],
+      "需求描述": "该模块旨在解决富集分析中产生过多相似术语的问题，通过计算Kappa值来合理合并不同来源的注释术语，避免冗余。",
+      "实用场景": "适用于生物医学研究中需要合并GO、KEGG等数据库的富集分析结果，用于术语分类和相似性分析。",
+      "图片类型": "系统发育树,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa89ggplotCirco",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa89ggplotCirco/FigureYa89ggplotCirco.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 17710
+        }
+      ],
+      "需求描述": "该模块旨在使用R语言绘制论文中的圆圈图，具体展示上调RNA结合蛋白（RBPs）在胶质母细胞瘤（GBM）和胶质瘤干细胞（GSC）中的表达变化，包括log2FC和p值。",
+      "实用场景": "适用于生物医学研究中可视化多组数据，如基因表达差异、p值和生存关联，常用于癌症基因组学或转录组学分析。",
+      "图片类型": "环形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa90subgroup",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa90subgroup/FigureYa90subgroup.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16374
+        }
+      ],
+      "需求描述": "该模块用于计算风险比（HR）和P值，并绘制森林图，以展示不同亚组的生存分析结果。",
+      "实用场景": "典型应用于临床亚组分析，特别是在肿瘤研究中，用于比较不同患者亚组（如不同肿瘤分期或项目ID）的生存差异。",
+      "图片类型": "森林图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa91cluster_heatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa91cluster_heatmap/FigureYa91cluster_heatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 26929
+        }
+      ],
+      "需求描述": "该模块用于在热图顶部用颜色条代替树形结构展示样本聚类结果，导出聚类后的样本顺序，并支持按文件指定顺序排序样本。",
+      "实用场景": "适用于基因表达量、免疫浸润等指标的聚类分析，突出分类效果；导出样本顺序用于后续生存分析等；按亚型或表型排序样本以增强可视化。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa92immune_gene_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa92immune_gene_update/FigureYa92immune_gene_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 20095
+        }
+      ],
+      "需求描述": "该模块用于计算免疫浸润与基因之间的相关性，并生成可视化图形。",
+      "实用场景": "典型应用包括评估基因对免疫浸润的影响，批量筛选候选基因；也可扩展用于分析基因共表达、转录本或临床指标与免疫浸润的关系。",
+      "图片类型": "棒棒糖图,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa93UMAP",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa93UMAP/FigureYa93UMAP.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 29730
+        }
+      ],
+      "需求描述": "该模块旨在帮助用户使用UMAP方法替代t-SNE进行数据降维可视化，满足用户对保留局部结构信息的需求。",
+      "实用场景": "适用于单细胞RNA测序数据分析，如拟南芥或人类细胞数据，用于细胞类群的可视化和聚类分析。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa94STEMbox_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa94STEMbox_update/FigureYa94STEMbox_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 37493
+        }
+      ],
+      "需求描述": "该模块旨在解决用户使用STEM分析时间序列数据后，需要绘制类似文章中展示的图形的问题，包括左侧的基因表达变化趋势线和右侧的基因表达量分布箱线图，并标注组间显著性。",
+      "实用场景": "适用于多个时间点的时间序列数据，如发育时期或处理后取样，通过STEM找到表达模式后，同时展示基因表达趋势和分布。",
+      "图片类型": "线图,箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa95pairwise",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa95pairwise/FigureYa95pairwise.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 19757
+        }
+      ],
+      "需求描述": "该模块旨在分析TCGA表达谱和体细胞突变数据，将MAF文件转换为二元突变矩阵，计算免疫细胞浸润得分，并评估样本相似性以进行相关性分析。",
+      "实用场景": "适用于多维度相关性研究，例如推断体细胞突变和免疫浸润在肿瘤异质性中的相关程度。",
+      "图片类型": "相关性散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa96R2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa96R2/FigureYa96R2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 31044
+        }
+      ],
+      "需求描述": "该模块旨在解决展示两个基因表达与免疫浸润高/低关系的问题，弥补了仅展示单个基因的不足。用户诉求是通过可视化双基因表达与免疫浸润的关联，便于基因功能评估和筛选。",
+      "实用场景": "典型应用包括评价基因对免疫浸润的影响，批量筛选影响免疫浸润的候选基因。也适用于展示转录因子和靶基因表达调控的关系。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa97correlationV3",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa97correlationV3/FigureYa97correlationV3.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 18369
+        }
+      ],
+      "需求描述": "该模块用于计算多个基因与免疫浸润之间的相关性，并生成热图以颜色展示相关系数，同时用星号标记显著相关性。",
+      "实用场景": "典型应用包括评估基因对免疫浸润的影响，批量筛选候选基因；也可扩展用于计算基因与其他变量（如临床表型）的相关性。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa98STEMheatmapV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa98STEMheatmapV2/FigureYa98STEMheatmapV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 44848
+        }
+      ],
+      "需求描述": "该模块用于绘制左侧的STEM表达趋势折线图和右侧对应的表达量热图，并输出每个profile对应的基因顺序。",
+      "实用场景": "适用于时间序列数据，如发育时期或处理后的时间点，同时展示基因表达趋势和表达量。",
+      "图片类型": "折线图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa99smoothHRv2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa99smoothHRv2/FigureYa99smoothHRv2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14457
+        }
+      ],
+      "需求描述": "该模块使用限制性三次样条插值法（RCS）解决连续性变量对风险的非线性影响问题，量化连续变量在不同取值处以基线为参考的风险比。",
+      "实用场景": "适用于生存分析中连续变量对风险存在非线性关联的场景，如医学研究中BMI对生存风险的影响分析，需控制其他协变量干扰。",
+      "图片类型": "RCS曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa101PCA",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa101PCA/FigureYa101PCA.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 21534
+        }
+      ],
+      "需求描述": "该模块用于生成RNA-seq数据的PCA图，通过相同颜色表示同一分组，不同形状区分批次或重复，以可视化批次效应和识别离群样本。",
+      "实用场景": "适用于每个分组内样品来自不同批次或多次生物学重复的场景，帮助判断批次效应影响或识别离群样品。",
+      "图片类型": "PCA",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa102multipanelROC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa102multipanelROC/FigureYa102multipanelROC.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15314
+        }
+      ],
+      "需求描述": "该模块旨在构建多变量二分类逻辑回归模型，用于预测生物标志物（如miRNA）对疾病（如肿瘤）的分类能力，并通过ROC曲线评估模型在训练集和测试集上的性能。",
+      "实用场景": "典型应用于生物医学研究，如利用基因表达数据建立预测模型，比较训练集和验证集的ROC曲线，评估模型泛化能力。",
+      "图片类型": "ROC",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa103coAbundant",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa103coAbundant/FigureYa103coAbundant.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 22957
+        }
+      ],
+      "需求描述": "该模块旨在解决用户对代谢化合物浓度数据进行聚类分析的需求，特别是通过手动构建加权共表达网络（WGCNA）来识别共丰度代谢物簇。用户诉求包括理解聚类方法、分析网络模块与表型数据的相关性。",
+      "实用场景": "典型应用包括生物医学研究中代谢组学数据分析，用于计算共表达模块与数量性状（如临床指标）的相关性，并通过热图可视化展示。适用于需要手动网络构建和外部聚类分析的场景。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa104GEOmining",
+      "docs": [
+        {
+          "type": "ipynb",
+          "file": "FigureYa104GEOmining/FigureYa104GEOmining.ipynb",
+          "title": "FigureYa104GEOmining",
+          "size_bytes": 15536
+        }
+      ],
+      "需求描述": "该模块用于从GEO数据库中批量检索高通量数据，获取其来源文章信息，标注影响因子，并输出文本文件和网页文件，网页中包含链接到PubMed页面的功能。",
+      "实用场景": "典型应用包括：实验设计时参考类似数据的文章设计；数据分析时借鉴相关文章的图表和描述方法；整合分析时优先选择高影响因子文章的数据以提高可靠性。",
+      "图片类型": "无图形产出",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa105GDSC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa105GDSC/FigureYa105GDSC.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15104
+        }
+      ],
+      "需求描述": "该模块利用pRRophetic算法，基于GDSC细胞系表达谱和TCGA基因表达谱构建岭回归模型，预测药物IC50值，并复现原图。",
+      "实用场景": "预测病人对药物的IC50，通过箱线图比较不同分组（如免疫聚类）的差异；还可批量计算筛选组间差异显著的药物。",
+      "图片类型": "箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa106immunotherapy",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa106immunotherapy/FigureYa106immunotherapy.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15473
+        }
+      ],
+      "需求描述": "该模块旨在复现原文方法，通过TIDE和GenePattern的submap算法预测单个样本或亚型对免疫治疗的响应可能性，并生成对比热图。",
+      "实用场景": "典型应用包括预测宫颈鳞状细胞癌等癌症样本对免疫检查点抑制剂的响应性，适用于生物医学研究中免疫治疗效果的评估。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa107ChIPheatmap",
+      "docs": [
+        {
+          "type": "ipynb",
+          "file": "FigureYa107ChIPheatmap/FigureYa107ChIPheatmap.ipynb",
+          "title": "FigureYa107ChIPheatmap",
+          "size_bytes": 31456
+        }
+      ],
+      "需求描述": "该模块旨在复现一个图形，其中左侧按ChIP-seq数据进行聚类，右侧ATAC-seq行的排序与左侧保持一致，以展示多组数据的对应关系。",
+      "实用场景": "典型应用包括：当手头有多组ChIP-seq或ATAC-seq数据时，按一种数据的聚类排序，从其他数据的分布中发现规律；或仅测少量样品时，结合公共数据深挖更多模式，如分析转录因子结合位点的染色质开放程度或组蛋白修饰分布。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa108RNAseqChIP",
+      "docs": [
+        {
+          "type": "ipynb",
+          "file": "FigureYa108RNAseqChIP/FigureYa108RNAseqChIP.ipynb",
+          "title": "FigureYa108RNAseqChIP",
+          "size_bytes": 25545
+        }
+      ],
+      "需求描述": "该模块旨在根据RNA-seq表达谱的聚类顺序，排列并绘制基因启动子区的ChIP-seq信号图，以可视化基因表达与表观遗传信号之间的关系。",
+      "实用场景": "典型应用包括按RNA-seq聚类或其他分组方式排列ChIP-seq或ATAC-seq数据，以发现规律；也可用于整合公共ChIP-seq/ATAC-seq数据与自有RNA-seq数据，丰富文章内容并挖掘更多生物学模式。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa109SubtypeGSEA_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa109SubtypeGSEA_update/FigureYa109SubtypeGSEA_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 26865
+        }
+      ],
+      "需求描述": "该模块旨在对多组数据进行基因集富集分析（GSEA），使用clusterProfiler工具识别各组特异性富集的通路，并可视化结果。",
+      "实用场景": "适用于生物医学研究中比较不同亚型或分组的通路富集状态，例如在癌症亚型分析中同时展示多个亚型的富集通路对比。",
+      "图片类型": "对角热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa110mutationSignature",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa110mutationSignature/FigureYa110mutationSignature.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 19206
+        }
+      ],
+      "需求描述": "该模块旨在根据基因突变数据，计算突变签名模式，通过非负矩阵分解进行聚类分析，识别亚型驱动签名，并绘制相应的热图。",
+      "实用场景": "适用于癌症基因组学研究，特别是分析肿瘤样本的突变特征，识别不同亚型的驱动突变签名，用于生物标志物发现和亚型分类。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa111markerGene",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa111markerGene/FigureYa111markerGene_step1.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15298
+        }
+      ],
+      "需求描述": "该模块旨在使用Seurat进行单细胞RNA测序数据分析，识别marker基因，并通过scanpy绘制热图，实现从数据预处理到可视化的一体化流程。",
+      "实用场景": "适用于单细胞测序数据的聚类分析和细胞类型注释，典型场景包括生物医学研究中细胞群体识别和基因表达模式可视化。",
+      "图片类型": "热图,小提琴图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa112Plus_venn",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa112Plus_venn/FigureYa112Plus_venn.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 19836
+        }
+      ],
+      "需求描述": "该模块旨在解决用户对彩色、按百分比填充的维恩图的需求，克服现有工具只能生成灰色PNG图的限制。通过整合R包如ggVennDiagram，实现输入基因列表后绘制彩色矢量图，并输出各区域基因名。",
+      "实用场景": "典型应用包括展示多个分组之间共有的或特异的差异表达基因重叠关系，适用于2、3或4个列表的比较，如生物医学研究中不同分析方法或条件下的基因重叠分析。",
+      "图片类型": "维恩图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa112venn",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa112venn/FigureYa112venn.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15829
+        }
+      ],
+      "需求描述": "该模块旨在解决现有工具（如Venny）在绘制Venn图时只能填充灰色且仅支持PNG格式的问题，用户诉求是生成彩色填充的Venn图，并输出为PDF矢量图，以增强可视化效果和便于后期编辑。",
+      "实用场景": "典型应用包括展示四组元素（如差异表达基因）的重叠数量，通过颜色深浅直观表示重叠程度，常用于生物医学数据分析中比较多组基因列表的共有和特有元素。",
+      "图片类型": "Venn图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa113MutSigCV",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa113MutSigCV/FigureYa113MutSigCV.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 23265
+        }
+      ],
+      "需求描述": "该模块旨在帮助用户使用MutSigCV算法推断显著突变基因（SMG），并生成相应的可视化图形。它解决了用户在处理基因突变数据时，需要识别关键突变基因并绘制专业图表的需求。",
+      "实用场景": "典型应用包括在癌症基因组学研究中，分析肿瘤样本的突变数据，识别与癌症相关的显著突变基因。适用于需要从MAF文件出发，通过标准化流程生成突变瀑布图的场景。",
+      "图片类型": "瀑布图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa114ternaryCluster",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa114ternaryCluster/FigureYa114ternaryCluster.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 11512
+        }
+      ],
+      "需求描述": "该模块用于对特定通路进行聚类分析，同时考虑正常样本表达水平，以探索癌症样本异质性。用户希望根据文献方法绘制相关图形，解决基因表达状态分类和样本分组问题。",
+      "实用场景": "适用于基因集表达谱变异较大时，展示基因表达异质性并对样本进行分组。分组结果可用于解释临床指标差异，证明基因集与样本性状的关联。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa115cofactor",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa115cofactor/FigureYa115cofactor.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16295
+        }
+      ],
+      "需求描述": "该模块旨在解决ChIP-seq数据相关性分析中无法选定标准样品进行聚类比较的问题，通过计算所有样品间的相关性并聚类，以识别相似的调控蛋白结合位点。",
+      "实用场景": "典型应用包括分析转录因子过表达或敲降后结合位点的相似性变化，以及通过相关性热图推测转录因子的作用机制。",
+      "图片类型": "相关性热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa116supervisedCluster",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa116supervisedCluster/FigureYa116supervisedCluster.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 21871
+        }
+      ],
+      "需求描述": "该模块用于在已有表达谱聚类的基础上，识别其标志基因，并对另一个表达谱进行样本聚类，实现监督分析。",
+      "实用场景": "典型应用包括在已知亚型（如通过聚类或金标准获得）的情况下，寻找亚型标志基因，并在独立数据集上进行监督聚类验证，例如在皮肤黑色素瘤（TCGA-SKCM）数据中识别新亚型。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa117multilinearDE",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa117multilinearDE/FigureYa117multilinearDE.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16426
+        }
+      ],
+      "需求描述": "该模块用于去除RNAseq表达量中的混杂因素，如年龄、性别、人种和批次等，以准确识别差异表达基因。方法基于多变量线性回归，结果通过热图比较展示。",
+      "实用场景": "适用于大规模测序数据的差异表达分析，当数据存在协变量干扰时，可去除混杂因素或将其纳入模型设计。典型场景包括生物医学研究中的基因表达分析。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa118MulticlassDESeq2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa118MulticlassDESeq2/FigureYa118MulticlassDESeq2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15311
+        }
+      ],
+      "需求描述": "该模块使用DESeq2实现多组差异分析，用于替换FigureYa109SubtypeGSEA中的配对差异表达过程（亚型数目≥3），并与其无缝对接。",
+      "实用场景": "结合FigureYa109SubtypeGSEA分析每组与其他样品的差异基因，找出亚型特异富集的通路；结合FigureYa116supervisedCluster分析每组与其他样品的差异基因，识别亚型特异的marker基因。",
+      "图片类型": "差异表达分析结果文件",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa119Multiclasslimma",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa119Multiclasslimma/FigureYa119Multiclasslimma.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13224
+        }
+      ],
+      "需求描述": "该模块使用limma包实现多组差异分析，旨在替换FigureYa109SubtypeGSEA中的配对差异表达过程（适用于亚型数目≥3的情况），并与其无缝对接。",
+      "实用场景": "结合FigureYa109SubtypeGSEA分析每一组与其他样品的差异基因，以找出亚型特异富集的通路；结合FigureYa116supervisedCluster分析差异基因，识别亚型特异的marker基因。",
+      "图片类型": "该模块主要产出文本格式的差异表达分析结果文件，不直接生成图形。",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa120MulticlassedgeR",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa120MulticlassedgeR/FigureYa120MulticlassedgeR.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 17340
+        }
+      ],
+      "需求描述": "该模块使用edgeR实现多组差异分析，旨在替换FigureYa109SubtypeGSEA中的配对差异表达过程（适用于亚型数目≥3的情况），并与其无缝对接。",
+      "实用场景": "结合FigureYa109SubtypeGSEA分析每组与其他样品的差异基因，以识别亚型特异富集的通路；结合FigureYa116supervisedCluster分析每组与其他样品的差异基因，以找出亚型特异的marker基因。",
+      "图片类型": "差异表达结果表",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa121MethCGIcluster",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa121MethCGIcluster/FigureYa121MethCGIcluster.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 19863
+        }
+      ],
+      "需求描述": "该模块旨在利用DNA甲基化数据进行分子分型，通过无监督聚类方法对样本进行分组，并生成相应的可视化图形。",
+      "实用场景": "典型应用包括从DNA甲基化450k数据中筛选高变异CpG位点，进行无监督聚类分子分型，常用于挖掘TCGA等公共数据库中的甲基化数据。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa122mut2expr",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa122mut2expr/FigureYa122mut2expr.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 48605
+        }
+      ],
+      "需求描述": "该模块旨在帮助用户理解和复现文献中的Figure 1b建模过程，通过线性模型分析突变对基因表达的影响，解决用户难以自行解析复杂代码和重现生物信息学分析的问题。",
+      "实用场景": "典型应用包括使用已有的基因型和转录组数据，通过线性模型解析突变位点对特定基因表达的贡献，适用于小样本量的生物医学研究，如癌症或遗传疾病中的基因表达调控分析。",
+      "图片类型": "散点图,箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa123mutVSexpr",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa123mutVSexpr/FigureYa123mutVSexpr.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10183
+        }
+      ],
+      "需求描述": "该模块旨在复现一个网站功能，用于分析基因突变与表达之间的相关性，解决用户只能制作分组条形图的限制，基于TCGA数据实现突变与表达关联的可视化。",
+      "实用场景": "典型应用于生物医学研究，如分析特定基因（如CD274）在癌症样本中的突变状态与表达水平的关系，适用于TCGA数据集的探索性分析。",
+      "图片类型": "热图,柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa124AssociationHeatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa124AssociationHeatmap/FigureYa124AssociationHeatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 11009
+        }
+      ],
+      "需求描述": "该模块用于通过热图可视化感兴趣变量与亚型（分组）之间的独立性，同时标注两组间差异的显著性P值。",
+      "实用场景": "适用于已知分组的样本数据，需要同时展示每个样本的多个特征层面，并突出显示两组间差异的统计显著性。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa125FishertestV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa125FishertestV2/FigureYa125FishertestV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13238
+        }
+      ],
+      "需求描述": "该模块将两个连续指标（如miRNA和FAP蛋白）按高低分为四组，计算它们之间的相关性和p值，并用热图进行可视化展示。",
+      "实用场景": "适用于研究两种连续因素分类后的相关性，如miRNA与靶基因或转录因子与靶基因之间的关联分析。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa126CorrelationHeatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa126CorrelationHeatmap/FigureYa126CorrelationHeatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13387
+        }
+      ],
+      "需求描述": "该模块用于展示与TIM-3基因表达相关的免疫基因在样本中的分布情况，通过无聚类热图根据相关系数排列基因，使用TCGA GBM数据和指定基因集复现原图。",
+      "实用场景": "典型应用包括展示与某一基因呈正负相关的多个基因的表达模式，例如在生物医学研究中分析免疫相关基因与目标基因的关联，并整合临床信息如样本亚组和基因型。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa127HeatmapPie",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa127HeatmapPie/FigureYa127HeatmapPie.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 22875
+        }
+      ],
+      "需求描述": "该模块用于绘制相关性热图并添加相关系数扇形图，使用TCGA GBM数据复现原图，展示通路表达变化与特定基因的相关性。",
+      "实用场景": "适用于生物医学研究中可视化通路表达矩阵和基因相关性，如分析TIM-3与免疫通路的关系，可快速生成论文图表。",
+      "图片类型": "热图,环形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa128Prognostic",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa128Prognostic/FigureYa128Prognostic.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 22215
+        }
+      ],
+      "需求描述": "该模块旨在通过迭代LASSO和AUC分析，从基因表达数据中筛选与生存相关的关键基因组合，解决用户如何高效识别生物标志物基因的问题。",
+      "实用场景": "典型应用于癌症研究，如结肠腺癌（COAD）的预后分析，通过TCGA数据识别与患者总生存相关的基因标记。",
+      "图片类型": "ROC曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa129TCGAbox",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa129TCGAbox/FigureYa129TCGAbox.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 11053
+        }
+      ],
+      "需求描述": "该模块用于使用TCGA数据绘制图形，比较不同分期和分型中特定基因的表达量，实现从数据下载到出图的完整流程。",
+      "实用场景": "典型应用包括分析基因在不同肿瘤分期中区分亚型的能力，并可扩展绘制ROC曲线或批量处理多个基因以评估分型效果。",
+      "图片类型": "箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa130coxSVM",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa130coxSVM/FigureYa130coxSVM_step12.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10389
+        }
+      ],
+      "需求描述": "该模块旨在筛选差异基因后，使用Cox回归、SVM-RFE和FW-SVM算法进一步选择有预后意义的基因，构建基因甲基化位点或表达的signature。",
+      "实用场景": "典型应用于生物医学研究，如癌症预后分析，使用TCGA等公开数据集（如肝癌LIHC）进行甲基化数据和生存数据的整合分析。",
+      "图片类型": "生存曲线,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa131CMap_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa131CMap_update/FigureYa131CMap_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 20735
+        }
+      ],
+      "需求描述": "该模块用于通过Connectivity Map (CMap) 分析鉴定能够靶向干性特征的潜在化合物或抑制剂，并重现特定文献中的图形。",
+      "实用场景": "适用于生物医学研究中，利用差异表达基因进行药物发现，例如在癌症研究中分析干性相关基因以识别潜在治疗药物。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa132alteration",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa132alteration/FigureYa132alteration.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 20509
+        }
+      ],
+      "需求描述": "该模块用于复现和生成类似文章中的扫雷图，展示基因突变频率在癌症类型中的分布，帮助用户可视化生物医学数据中的基因变异模式。",
+      "实用场景": "典型应用包括从TCGA等数据库中提取特定基因的突变数据，绘制在感兴趣的癌症类型中的突变频率图；也可应用于自定义基因或突变数据集，需先整理数据格式。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa133m6Apeak_update",
+      "docs": [
+        {
+          "type": "readme",
+          "file": "FigureYa133m6Apeak_update/Readme.png",
+          "title": "\u0006W\u0010{,\u0017.zury~{{9\u0015nJ\u0002\u0013\u0005(@\u0001",
+          "size_bytes": 180253
+        }
+      ],
+      "需求描述": "该模块用于更新或生成与FigureYa133m6Apeak相关的图形数据，可能涉及数据可视化或分析，以支持用户对特定峰值的观察和比较。",
+      "实用场景": "适用于生物信息学或数据分析领域，用于展示基因表达、峰值检测结果或相关统计图表，帮助研究人员快速识别模式。",
+      "图片类型": "散点图,箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa135multiVolcano",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa135multiVolcano/FigureYa135multiVolcano.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14798
+        }
+      ],
+      "需求描述": "该模块旨在复现学术文章中的复杂火山图，通过整合散点图、顶部百分比图和右侧柱状图，同时展示多层信息，如甲基化差异、P值、基因组特征分布和分类百分比。",
+      "实用场景": "适用于生物医学数据分析，如甲基化位点或差异表达基因的可视化，支持自定义特征和百分比计算，便于多维度数据解读。",
+      "图片类型": "火山图,散点图,柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa136fgsea",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa136fgsea/FigureYa136fgsea.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 25742
+        }
+      ],
+      "需求描述": "该模块用于展示GSEA富集分析结果，兼容Java版和clusterProfiler版GSEA输入，以类似fgsea的图形呈现多组或多条通路的结果。",
+      "实用场景": "典型应用包括生物医学研究中展示基因集与指标（如stemness index）的关联，或RNA蛋白质关联分析等，支持自定义基因集和多种输入格式。",
+      "图片类型": "GSEA富集图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa138NiceCalibration",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa138NiceCalibration/FigureYa138NiceCalibration.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 7744
+        }
+      ],
+      "需求描述": "该模块用于绘制逻辑回归模型的校准图，以评估预测风险与实际观测结果之间的一致性，并包含Hosmer-Lemeshow检验来验证模型的拟合优度。",
+      "实用场景": "典型应用于评价诊断模型的校准度，例如在生物医学研究中验证淋巴结转移预测模型的临床可用性，但不能用于预后模型。",
+      "图片类型": "校准图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa139TMB_titv",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa139TMB_titv/FigureYa139TMB_titv.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15922
+        }
+      ],
+      "需求描述": "该模块旨在输入TCGA突变数据，复现特定图形，用于比较不同癌症类型的肿瘤突变负荷和碱基突变模式。",
+      "实用场景": "典型应用包括直观展示感兴趣癌种与TCGA其他癌种的TMB整体情况，以及六种碱基转换和颠换的比例；还可用于自定义分组，如比较同一疾病的不同亚型。",
+      "图片类型": "散点图,堆叠条形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa140mosaicpie",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa140mosaicpie/FigureYa140mosaicpie.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12337
+        }
+      ],
+      "需求描述": "该模块用于输入TCGA数据，绘制展示lncRNA表观状态变化比例的图形。具体解决用户需要可视化不同癌症类型中表观激活（EA）和表观抑制（ES）lncRNA百分比分布的问题。",
+      "实用场景": "典型应用包括生物医学研究中分析TCGA数据，展示多个癌症类型或细胞系中基因表观修饰的百分比分布。适用于需要比较不同组别数据比例的可视化场景，如癌症基因组学或表观遗传学研究。",
+      "图片类型": "饼图,矩阵图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa141risk",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa141risk/FigureYa141risk.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10872
+        }
+      ],
+      "需求描述": "该模块用于绘制风险因子关联图，通过一条竖线将高、低风险组分开，并使用两种颜色在热图中区分两组，同时展示风险评分和基因表达量。",
+      "实用场景": "典型应用于生物医学研究中，如生存分析时同时可视化风险评分、随访时间和特征基因表达，帮助识别与疾病预后相关的风险因素。",
+      "图片类型": "热图,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa142circosBar",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa142circosBar/FigureYa142circosBar.Rmd",
+          "title": "需求描述",
+          "size_bytes": 24798
+        }
+      ],
+      "需求描述": "该模块使用circos绘制包含热图、连线和柱状图的复合图形，用于可视化差异KO功能类别与KEGG通路之间的关系。",
+      "实用场景": "适用于展示基因与通路、细胞与分群、物种与菌群等关联关系，例如在宏基因组分析中可视化差异基因功能类别及其富集通路。",
+      "图片类型": "环形图,热图,柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa143survCor",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa143survCor/FigureYa143survCor.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 18405
+        }
+      ],
+      "需求描述": "该模块用于绘制复杂的相关性图，包括计算每个基因表达值下的logrank score，以识别最佳分组cut-off，并以肠癌MSS和MSI样本为例展示基因表达与生存的关系。",
+      "实用场景": "典型应用包括在生物医学研究中，分析基因表达相关性、MSI/MSS状态、生存风险分组，适用于癌症预后评估和分子分型可视化。",
+      "图片类型": "散点图,相关性图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa144DiagHeatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa144DiagHeatmap/FigureYa144DiagHeatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12317
+        }
+      ],
+      "需求描述": "该模块用于绘制元素对角化热图，将每个元素分割成上下两块，以同时展示同一对象的两个对立水平，如拷贝数扩增和缺失。",
+      "实用场景": "典型应用包括展示基因在癌症中的拷贝数变异频率（扩增和缺失），或同时显示基因表达量和DNA甲基化水平等对立数据。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa145target",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa145target/FigureYa145target.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13973
+        }
+      ],
+      "需求描述": "该模块旨在复现特定生物医学网络图，通过计算元素位置绘制自定义图形，解决现有包无法直接生成相同图形的问题。",
+      "实用场景": "适用于展示分类、分组与元素间的关系，如糖蛋白-糖基化网络、转录因子-GO-靶基因互作、表观修饰-基因表达等生物数据可视化。",
+      "图片类型": "网络图,环形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa146TMEbox",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa146TMEbox/FigureYa146TMEbox.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9881
+        }
+      ],
+      "需求描述": "该模块用于计算免疫微环境TMEscore，并绘制对比箱线图以展示不同组别间的差异，同时标注统计显著性。",
+      "实用场景": "适用于比较不同TMEcluster的微环境相关特征分布差异，也可用于分析复发、转移、癌与癌旁等表型数据的差异。",
+      "图片类型": "箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa147interaction",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa147interaction/FigureYa147interaction.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12617
+        }
+      ],
+      "需求描述": "该模块用于根据相互作用文件绘制调控网络图，其中线条长度对应相互作用分数，线条数量和颜色对应证据类型。",
+      "实用场景": "适用于展示蛋白质相互作用、转录因子-靶基因关系或miRNA-靶基因关系等生物医学数据中的调控网络。",
+      "图片类型": "调控网络图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa148SimpleDendrogram",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa148SimpleDendrogram/FigureYa148SimpleDendrogram.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8599
+        }
+      ],
+      "需求描述": "该模块用于绘制带有注释信息的树状图，以验证生物标志物或签名在数据集中的分类效果。通过层次聚类将样本分组，并将已知信息（如淋巴结转移状态或生存状态）作为注释添加到图上，使分类结果直观可见。",
+      "实用场景": "典型应用包括使用TCGA等数据发现的签名，在其他数据集（如GEO或MSKCC队列）中进行验证，展示预测性能。适用于生物医学研究中的聚类验证和结果可视化。",
+      "图片类型": "树状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa149rankHeatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa149rankHeatmap/FigureYa149rankHeatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10892
+        }
+      ],
+      "需求描述": "该模块用于将连续变量（如logFC和P值）转换为分类变量，并绘制热图，以更清晰地展示基因差异表达或相关性分析的趋势。",
+      "实用场景": "适用于生物医学研究中展示基因差异表达结果，特别是当需要将连续数据（如logFC和P值）分类后可视化，以突出表达变化趋势；也可用于转换和展示相关性或其他连续变量。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa150diversityScore",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa150diversityScore/FigureYa150diversityScore.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8032
+        }
+      ],
+      "需求描述": "该模块用R实现计算diversity score的算法，用于评估肿瘤异质性，并生成相关图形。",
+      "实用场景": "适用于单细胞DNA测序数据分析，典型场景是评价肝癌等肿瘤样本的异质性。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa151pathifier",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa151pathifier/FigureYa151pathifier.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12918
+        }
+      ],
+      "需求描述": "该模块使用R包pathifier，根据样本基因表达水平计算指定基因通路的得分，并绘制热图，以解决在富集分析中因参数设置导致感兴趣通路不可见的问题。",
+      "实用场景": "典型应用包括在差异基因列表的富集分析或GSEA中，当参数设置不当无法显示特定通路时，将基因表达矩阵转换为通路表达矩阵进行直接可视化；也适用于生物医学研究中对通路表达模式的探索。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa152DouleCorPlot",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa152DouleCorPlot/FigureYa152DouleCorPlot.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10260
+        }
+      ],
+      "需求描述": "该模块旨在复现原文中两组数据一起展示的相关性图，通过将两个不同来源的相关性分析结果整合在同一图中，简化多组数据比较的展示过程。",
+      "实用场景": "适用于横纵坐标一致的相关性结果展示，如比较两个不同癌症类型中免疫细胞或基因之间的相关性，常用于生物医学研究中多组数据的可视化对比。",
+      "图片类型": "相关性矩阵图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa153ccgraph",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa153ccgraph/FigureYa153ccgraph.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 22018
+        }
+      ],
+      "需求描述": "该模块旨在使用R语言和ggraph包，从形式上复现生物医学研究中的层级结构图，例如展示基因突变数据或通路富集分析结果。",
+      "实用场景": "典型应用包括展示基因与突变的关系、上游调控因子调控下游基因的层级和强度、宏基因组测序中物种丰度信息等层级结构数据。",
+      "图片类型": "环形图,桑基图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa154immuneSubtypes",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa154immuneSubtypes/FigureYa154immuneSubtypes.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12413
+        }
+      ],
+      "需求描述": "该模块旨在复现文章中关于癌症免疫亚型的结果图，通过共识聚类和基因表达特征分析，识别和可视化免疫亚型。",
+      "实用场景": "典型应用包括基于免疫浸润定量结果对癌症样本进行分类，适用于TCGA等大型癌症数据集的免疫微环境分析。",
+      "图片类型": "热图,密度图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa155ATAC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa155ATAC/FigureYa155ATAC.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 17671
+        }
+      ],
+      "需求描述": "该模块旨在复现展示染色质开放程度差异的热图，解决用户对ATAC-seq或ChIP-seq数据中染色质可及性变化的可视化需求。",
+      "实用场景": "适用于生物医学研究中分析染色质开放程度差异的典型场景，如比较不同基因型或处理条件下的ATAC-seq数据。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa156enrichSimulation",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa156enrichSimulation/FigureYa156enrichSimulation.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 7476
+        }
+      ],
+      "需求描述": "该模块旨在通过蒙特卡洛随机模拟方法，评估21个过表达且与预后差相关的RNA结合蛋白（RBP）是否具有统计学意义，即判断这些基因的出现是否为小概率事件，而非随机发生。",
+      "实用场景": "典型应用包括在生物医学研究中，对特定基因集（如差异表达基因）进行统计检验，以验证其生物学意义；适用于癌症基因组学数据分析，例如基于cBioPortal数据的基因突变和拷贝数变异模拟。",
+      "图片类型": "直方图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa157ChIPpvalue",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa157ChIPpvalue/FigureYa157ChIPpvalue.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10668
+        }
+      ],
+      "需求描述": "该模块用于计算ChIP-seq样本间的p-value，以判断全基因组范围的结合是否有全局变化。",
+      "实用场景": "适用于校正过的ChIP-seq数据，如加spike-in的定量ChIP-seq（如ChIP-RX）或校正过的普通ChIP-seq。",
+      "图片类型": "线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa158MutationPattern",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa158MutationPattern/FigureYa158MutationPattern.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15404
+        }
+      ],
+      "需求描述": "该模块旨在通过非负矩阵分解（NMF）方法分析TCGA突变数据，识别和可视化突变特征，以探讨癌症的病因和机制。",
+      "实用场景": "典型应用包括分析膀胱癌等癌种的突变特征，用于研究DNA修复缺陷或诱变剂暴露等过程。",
+      "图片类型": "突变特征图,贡献图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa159LR_RF_V2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa159LR_RF_V2/FigureYa159LR_RF_V2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10099
+        }
+      ],
+      "需求描述": "该模块旨在扩展FigureYa65SVM的功能，允许用户尝试随机森林（RF）和逻辑回归（LR）分类器，并解决使用五折交叉验证绘制AUC曲线时遇到的问题。",
+      "实用场景": "典型应用包括在LASSO降维后，使用LR或RF方法进行五折交叉验证，评估特征预测效能，适用于生物医学数据分类任务，如癌症亚型预测。",
+      "图片类型": "ROC曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa160scGSVA",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa160scGSVA/FigureYa160scGSVA.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 17150
+        }
+      ],
+      "需求描述": "该模块旨在解决单细胞亚群功能注释后，如何计算每个亚群中特定通路的基因集得分的问题。用户需要通过GSVA方法量化通路表达，并进行组间差异比较和可视化。",
+      "实用场景": "典型应用包括单细胞RNA测序数据分析，从原始表达矩阵开始，经过聚类分组后，使用GSVA评估通路活性，并比较不同细胞亚群间的通路差异，常见于生物医学研究中的功能注释和差异表达分析。",
+      "图片类型": "热图,小提琴图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa161stemness",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa161stemness/FigureYa161stemness.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14765
+        }
+      ],
+      "需求描述": "该模块用于计算肿瘤基因表达和DNA甲基化的干性指数（mRNAsi和mDNAsi），并生成可视化图形。",
+      "实用场景": "典型应用于生物医学研究，如分析肿瘤样本的干性特征，结合临床信息展示干性指数与病理类型、亚组、性别和转移状态的关系。",
+      "图片类型": "条形图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa162boxViolin",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa162boxViolin/FigureYa162boxViolin.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 7551
+        }
+      ],
+      "需求描述": "该模块用于绘制两组或多组数据关于某一连续变量的箱型图和小提琴图，结合原始数据、统计量和统计推断，以直观比较组间差异。",
+      "实用场景": "适用于生物医学研究中对比不同组别（如DNA甲基化年龄分组）的连续变量分布，常用于展示药物敏感性、分子特征等统计结果。",
+      "图片类型": "箱线图,小提琴图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa163twoVarCor_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa163twoVarCor_update/FigureYa163twoVarCor_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13875
+        }
+      ],
+      "需求描述": "该模块用于绘制多组数据在两个变量上的相关性散点图，并比较不同组相关性是否有统计学差异。",
+      "实用场景": "适用于展示两个基因或性状之间的相关性，支持2组、3组或多组数据一起绘制，常用于生物医学数据分析。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa164PCA3D",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa164PCA3D/FigureYa164PCA3D.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 11210
+        }
+      ],
+      "需求描述": "该模块用于生成3D PCA图，展示不同样本组之间的关系，如区分胶质母细胞瘤和低级别胶质瘤的免疫表型差异。",
+      "实用场景": "PCA一般用于测序数据的质控，评估批次效应；也可用于展示特定基因集（如免疫相关基因）在分组间的差异，例如在生物医学研究中识别不同疾病亚型的免疫特征。",
+      "图片类型": "PCA",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa165heatmapPvalue",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa165heatmapPvalue/FigureYa165heatmapPvalue.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16094
+        }
+      ],
+      "需求描述": "该模块用于通过热图展示亚型表达谱，并提供表达谱组间比较的p值，以可视化基因表达差异。",
+      "实用场景": "适用于两组或多组样本的组间差异检验，如比较不同WHO级别的胶质瘤中m6A RNA甲基化调节因子的表达水平。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa166scCNV",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa166scCNV/FigureYa166scCNV.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10748
+        }
+      ],
+      "需求描述": "该模块用于单细胞CNV的计算和可视化，旨在从单细胞RNA-seq数据中推断拷贝数变异，并生成相关图形。",
+      "实用场景": "适用于使用单细胞RNA-seq数据计算CNV，并比较不同组别（如肿瘤细胞与非肿瘤细胞）之间的差异，常见于生物医学研究中的异质性分析。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa167TumorIndex",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa167TumorIndex/FigureYa167TumorIndex.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12889
+        }
+      ],
+      "需求描述": "该模块旨在通过RNAseq数据和转录因子聚类计算肿瘤指数（TI），用于区分正常组织和癌组织。用户需要输入建模动物肝癌模型的RNAseq数据计算TI，并使用外部验证数据重复计算，以验证模型的区分能力。",
+      "实用场景": "典型应用包括利用该模型方法学训练多阶段或多点的RNAseq数据，或应用于单细胞数据（如不同分化程度的T细胞）。此外，可用于验证数据，例如区分癌和正常细胞的区分度。",
+      "图片类型": "箱线图,柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa168legoplot",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa168legoplot/FigureYa168legoplot.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9758
+        }
+      ],
+      "需求描述": "该模块用于从基因组中提取突变位点的context序列，并使用乐高图展示突变模式，同时绘制饼图以显示突变类型的比例。",
+      "实用场景": "适用于生物医学研究中同时展示三种特征的数据，特别是当一种特征具有m x n结构（如4种碱基x4种碱基）时，常用于突变特征分析。",
+      "图片类型": "乐高图,饼图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa169sigHeatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa169sigHeatmap/FigureYa169sigHeatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 21309
+        }
+      ],
+      "需求描述": "该模块用于基于配对差异表达分析，绘制亚型特异性上调或下调基因的对角热图。例如，当样本被分为4-5个组时，分析并可视化每个组中差异表达基因的表达模式。",
+      "实用场景": "典型应用包括在生物医学研究中，对至少3个亚型的样本进行配对差异表达分析后，计算每个亚型的特异性基因集，并生成热图以直观展示基因表达差异。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa170ImmuLncRNA",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa170ImmuLncRNA/FigureYa170ImmuLncRNA.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 22304
+        }
+      ],
+      "需求描述": "该模块旨在通过R代码解析和可视化，帮助用户理解ImmuLncRNA算法，该算法用于识别免疫相关的长链非编码RNA（lncRNA），并消除肿瘤纯度对结果的影响。",
+      "实用场景": "适用于生物医学研究中lncRNA的功能注释，特别是免疫相关分析，也可扩展到甲基化数据等场景。",
+      "图片类型": "双坐标轴图,散点图,柱形图,折线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa171subgroupSurv",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa171subgroupSurv/FigureYa171subgroupSurv.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 5856
+        }
+      ],
+      "需求描述": "该模块旨在自动化亚组生存分析流程，解决手动操作繁琐的问题，通过输入生存数据和临床亚组信息，批量生成不同亚组的生存曲线图。",
+      "实用场景": "典型应用包括在生物医学研究中，对风险签名在不同年龄、性别、Gleason评分等临床特征下的有效性进行验证，适用于肿瘤学等领域的亚组分析。",
+      "图片类型": "生存曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa172ggplot2Gviz",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa172ggplot2Gviz/FigureYa172ggplot2Gviz.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14331
+        }
+      ],
+      "需求描述": "该模块以bw或bedgraph文件作为输入，提取信号并使用ggplot2绘制峰图，旨在可视化基因转录调控相关的测序数据分布。",
+      "实用场景": "适用于基因转录调控机制研究，常用于展示RNA-seq、ChIP-seq、ATAC-seq等测序信号在基因附近的分布，便于文章发表时作为Figure使用。",
+      "图片类型": "峰图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa173fancybar",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa173fancybar/FigureYa173fancybar.Rmd",
+          "title": "需求描述",
+          "size_bytes": 15792
+        }
+      ],
+      "需求描述": "该模块旨在实现多组柱状图的绘制，支持组内亚组比较和组间比较，并提供直接生成图形的代码。",
+      "实用场景": "适用于多组数据（如临床研究中的不同组别）的柱状图展示，其中某些组包含多个亚组，需要进行组内和组间统计分析。",
+      "图片类型": "多组柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa174squareCross",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa174squareCross/FigureYa174squareCross.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14302
+        }
+      ],
+      "需求描述": "该模块用于可视化基因表达、DNA甲基化、miRNA和药物响应之间的多组学关联连线，解决用户无法在原始文献代码中找到特定图形代码的问题，实现自定义节点和连线的灵活绘制。",
+      "实用场景": "适用于生物医学研究中多组学数据的交互可视化，如展示缺氧相关特征与药物响应的关联、基因-miRNA-药物靶点通路的网络分析，支持任意两组或多组节点的上下左右排列和连线。",
+      "图片类型": "连线图,条形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa175quadrant",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa175quadrant/FigureYa175quadrant.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9424
+        }
+      ],
+      "需求描述": "该模块用于绘制九宫格散点图，以展示两个维度数据的关系，并突出显示特定基因名称。",
+      "实用场景": "适用于多组学数据关联分析，如RNA-seq与蛋白质组数据、RNA-seq与ATAC-seq等，用于比较同一基因在不同维度的一致性。",
+      "图片类型": "散点图,九宫格图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa176BlandAltman",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa176BlandAltman/FigureYa176BlandAltman.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8966
+        }
+      ],
+      "需求描述": "该模块旨在提供Bland-Altman图的标准化代码，解决用户无法在线找到可重复代码来比较两种方法（如新模型与传统模型）一致性的问题。",
+      "实用场景": "典型应用包括比较医学图像分割模型与金标准之间的一致性，例如评估V-Net模型在肺部分割中的性能。",
+      "图片类型": "Bland-Altman图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa177RNAvelocity",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa177RNAvelocity/FigureYa177RNAvelocity.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 20981
+        }
+      ],
+      "需求描述": "该模块使用velotyto对单细胞数据进行RNA velocity分析，预测细胞状态的未来变化。",
+      "实用场景": "适用于分析发育谱系和细胞动力学，例如研究衰老心脏成纤维细胞的转录活性。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa178receptorLigand",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa178receptorLigand/FigureYa178receptorLigand.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14355
+        }
+      ],
+      "需求描述": "该模块用于通过本地CellPhoneDB进行配体-受体分析，并使用ggplot2重新绘制图形，以提升灵活性和自定义性。",
+      "实用场景": "适用于单细胞转录组数据分析，特别是需要灵活调整图形细节或对接其他图形类型的场景。",
+      "图片类型": "点图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa179AMDAplot",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa179AMDAplot/FigureYa179AMDAplot.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 40596
+        }
+      ],
+      "需求描述": "该模块旨在复现衰老介导疾病对齐分数（AMDA score）的算法，并重现原文中的Figure3a图形。用户诉求包括计算AMDA score以量化衰老与疾病关联，并进行组间对比。",
+      "实用场景": "适用于转录组数据分析，将用户数据与衰老关联，可用于肿瘤和非肿瘤领域。典型应用包括使用AMDA score进行疾病衰老相关性评估，或绘制带二级标签的热图。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa180FGAplotV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa180FGAplotV2/FigureYa180FGAplotV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 18661
+        }
+      ],
+      "需求描述": "该模块旨在基于cBioPortal的算法，分别计算基因组获得分数（FGG）和基因组丢失分数（FGL），以补充cBioPortal仅提供总体基因组改变分数（FGA）的不足。用户诉求包括输入TCGA的CNV数据，计算FGA、FGG和FGL，并利用临床信息比较不同分组间的差异，复现相关文献中的图表。",
+      "实用场景": "典型应用包括使用自己的测序数据计算FGA，或利用TCGA数据计算不同临床分组的FGA、FGG和FGL，并进行统计差异检验。适用于生物医学研究中的数据可视化和分析，如癌症基因组学中的拷贝数变异研究。",
+      "图片类型": "堆叠条形图,自定义条形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa181multiCorrelation",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa181multiCorrelation/FigureYa181multiCorrelation.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8721
+        }
+      ],
+      "需求描述": "该模块用于计算多组数据中两个变量之间的相关性，并进行FDR校正得到q值；同时将多组数据的散点图和趋势线合并到一张图上，用不同颜色区分各组，便于平行对比。",
+      "实用场景": "适用于展示多组数据的相关性分析，如生物医学研究中微生物与细胞因子的关联；当每组观察值较少时，可在一张图上对比多组斜率；也可用于批量绘制相关性图形，支持双坐标轴散点图。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa182RFSurvV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa182RFSurvV2/FigureYa182RFSurvV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9125
+        }
+      ],
+      "需求描述": "该模块基于随机生存森林分析，进一步筛选和优化变量以实现降维，并完成Figure5的作图。",
+      "实用场景": "使用随机森林对生存数据进行降维，根据变量重要性排序并筛选基因组成预后特征。",
+      "图片类型": "错误率图,变量重要性图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa183condSurv",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa183condSurv/FigureYa183condSurv.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13373
+        }
+      ],
+      "需求描述": "该模块用于绘制条件生存曲线，基于R包condsurv实现条件生存概率的可视化，并提供条件生存概率表。",
+      "实用场景": "适用于生物医学研究中分析患者在不同时间点存活后的额外生存概率，如胰腺癌术后患者条件生存评估。",
+      "图片类型": "生存曲线,条件生存概率表图,风险表图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa184ranger",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa184ranger/FigureYa184ranger.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9750
+        }
+      ],
+      "需求描述": "该模块旨在实现随机森林滑动窗口法，用于对生存数据进行降维和变量筛选，通过加权随机森林和逐步回归方法优化特征选择。",
+      "实用场景": "典型应用于生物医学研究，如使用加权随机森林对生存数据降维，根据滑动窗口顺序前向特征选择法筛选变量，适用于预后基因筛选和模型优化。",
+      "图片类型": "线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa185sciATAC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa185sciATAC/FigureYa185sciATAC.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12243
+        }
+      ],
+      "需求描述": "该模块旨在通过Cicero分析单细胞ATAC-seq数据中的顺式调控关系，并使用washu浏览器可视化结果，解决数据处理和可视化衔接问题。",
+      "实用场景": "典型应用包括利用单细胞ATAC-seq数据探索目的基因的远距离调控机制，例如在生物医学研究中挖掘顺式调控线索。",
+      "图片类型": "基因组浏览器图,连接图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa186swimmerplot",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa186swimmerplot/FigureYa186swimmerplot.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 11356
+        }
+      ],
+      "需求描述": "该模块用于绘制swimmer plot，根据预后或治疗特点展示带有记号的时间柱状图，通常与waterfall plot结合使用。",
+      "实用场景": "典型应用包括生物医学研究中可视化患者生存时间、疾病进展和治疗响应，常用于临床试验数据分析。",
+      "图片类型": "swimmer plot",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa187RMS",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa187RMS/FigureYa187RMS.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 7941
+        }
+      ],
+      "需求描述": "该模块用于比较两个预后模型的预测性能，通过计算c-index（一致性指数）来评估模型优劣，并绘制相应的图形展示结果。",
+      "实用场景": "适用于生物医学研究中，比较不同预后模型（如基于基因表达和临床变量的模型）在预测患者生存时间方面的性能，常用于肿瘤预后分析。",
+      "图片类型": "RMS曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa188CNVload",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa188CNVload/FigureYa188CNVload.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8015
+        }
+      ],
+      "需求描述": "该模块用于比较不同分子分型之间的focal-level和arm-level的拷贝数增益与缺失负担，并生成相应的可视化图形。",
+      "实用场景": "适用于生物医学研究中分析免疫亚型或分子分型背后的拷贝数变异负担，特别是在免疫逃逸机制相关的癌症研究领域。",
+      "图片类型": "箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa189timeCindex",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa189timeCindex/FigureYa189timeCindex.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8870
+        }
+      ],
+      "需求描述": "该模块旨在解决用户需要绘制时间依赖性C-index曲线的需求，以评估不同预后模型在不同时间点的一致性指数，弥补现有包无法直接绘制此类图形的不足。",
+      "实用场景": "典型应用包括在生物医学研究中比较多个Cox比例风险模型（如仅风险得分、仅年龄或综合变量模型）的预测性能，适用于生存分析中模型评估和选择。",
+      "图片类型": "折线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa190batchLogistic",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa190batchLogistic/FigureYa190batchLogistic.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8343
+        }
+      ],
+      "需求描述": "该模块旨在批量执行单变量和多变量逻辑回归分析，解决逐个进行逻辑回归的低效问题，提高研究效率。",
+      "实用场景": "适用于生物医学数据分析中，需要批量计算多个特征（如基因表达量或临床信息）与分组变量之间的逻辑回归关系，典型应用于批量筛选显著变量。",
+      "图片类型": "表格",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa191bestLogistic",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa191bestLogistic/FigureYa191bestLogistic.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9055
+        }
+      ],
+      "需求描述": "该模块旨在通过ROC曲线寻找连续变量的最佳截断值，将其转换为分类变量，以最小化预测响应变量时的p值，并生成分组后的数据。",
+      "实用场景": "典型应用于生物医学数据分析，利用ROC曲线确定连续变量的最佳截断点，然后进行单变量逻辑回归分析，以评估变量对分组的影响。",
+      "图片类型": "ROC曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa192breakpoint",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa192breakpoint/FigureYa192breakpoint.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10502
+        }
+      ],
+      "需求描述": "该模块旨在实现Fig 2中的C图，通过输入SEER数据，运行循环Cox模型，应用LOWESS平滑方法绘制图形，并利用Chow检验确定结构变点。",
+      "实用场景": "适用于大样本数据中寻找计数变量（如ELN）对预后风险的变点分析，例如使用SEER数据库或类似的自有数据。",
+      "图片类型": "散点图,平滑曲线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa193RiskTable",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa193RiskTable/FigureYa193RiskTable.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15350
+        }
+      ],
+      "需求描述": "该模块用于构建和验证风险评分模型，通过TCGA数据训练集和GEO数据测试集，评估风险评分的预后独立性。",
+      "实用场景": "典型应用于生物医学研究，如癌症预后分析，通过多变量Cox回归和LASSO方法验证风险因素。",
+      "图片类型": "森林图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa194pySCENIC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa194pySCENIC/FigureYa194pySCENIC.Rmd",
+          "title": "需求描述",
+          "size_bytes": 8768
+        }
+      ],
+      "需求描述": "该模块旨在通过SCENIC（单细胞调控网络推断和聚类）方法，从单细胞转录组数据中挖掘转录调控网络，鉴定细胞状态。它解决了用户对公共数据中细胞类型特异性调控因子分析的需求，并基于直播反馈提供了实用教程。",
+      "实用场景": "典型应用包括使用单细胞转录组测序数据构建转录调控网络，适用于人类、小鼠和果蝇等物种的细胞状态鉴定研究，常用于复现学术文章中的关键图表。",
+      "图片类型": "t-SNE图,热图,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa195PanPaire",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa195PanPaire/FigureYa195PanPaire.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 20232
+        }
+      ],
+      "需求描述": "该模块用于直接比较TCGA泛癌数据中配对样本的基因表达差异，解决之前模块未使用配对数据的问题，通过连线图展示正常与肿瘤样本间的通路富集得分变化。",
+      "实用场景": "典型应用包括提取TCGA泛癌配对样本的表达数据，计算特定通路（如代谢通路）的富集得分，并生成连线图进行可视化比较；该方法也适用于其他TCGA数据类型如DNA甲基化，或用于差异基因筛选和热图展示。",
+      "图片类型": "连线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa196PanPie",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa196PanPie/FigureYa196PanPie.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15807
+        }
+      ],
+      "需求描述": "该模块旨在使用扇形图直观展示分组数据中不同临床预后分期的分布差异，使图表美观且易于理解。",
+      "实用场景": "适用于生物医学数据分析，如比较高风险和低风险组在临床病理因素（如状态、分期、M、N、T）上的分布，并可推广到其他数据类型。",
+      "图片类型": "扇形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa197SmoothHaz",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa197SmoothHaz/FigureYa197SmoothHaz.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 17021
+        }
+      ],
+      "需求描述": "该模块用于复现平滑化的风险函数曲线（B），解决用户对生存数据中风险函数进行核密度估计和可视化的需求。",
+      "实用场景": "典型应用包括探索手术切除的肺腺癌微乳头亚型术后复发风险随时间变化，或使用TCGA临床数据生成任何癌症类型的核密度图以展示特征变化。",
+      "图片类型": "风险曲线,核密度图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa198SignatureCombinationV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa198SignatureCombinationV2/FigureYa198SignatureCombinationV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12454
+        }
+      ],
+      "需求描述": "该模块旨在通过排列组合方法，从随机生存森林分析筛选的基因中，基于Kaplan-Meier分析的log-rank p值和基因数目，选择最优的预后签名模型，以解决生物医学研究中基因签名优化和可视化的需求。",
+      "实用场景": "典型应用于生物信息学领域，特别是在癌症预后研究中，用于从大量基因组合中筛选出具有显著生存差异且基因数目较少的签名，适用于处理基因表达数据和临床生存数据的整合分析。",
+      "图片类型": "火山图,重要性图,柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa199crosslink",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa199crosslink/FigureYa199crosslink.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15846
+        }
+      ],
+      "需求描述": "该模块用于绘制具有多层信息的连线图，比基础版本增加了节点大小和颜色的可视化，以展示更丰富的节点和关系属性。",
+      "实用场景": "适用于生物医学数据分析，如细胞间通讯网络、基因-通路关联等，通过连线颜色和粗细表示关系类别和强度，节点排列可揭示生物学模式。",
+      "图片类型": "连线图,网络图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa200pairwiseAUC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa200pairwiseAUC/FigureYa200pairwiseAUC.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12432
+        }
+      ],
+      "需求描述": "该模块旨在实现在两个数据集中识别预后判断力良好的基因，通过计算AUC值评估基因的预后价值，并可视化结果。",
+      "实用场景": "典型应用于生物医学研究，如使用训练集定义候选基因后，在多个测试集中筛选具有一致良好预后判断力的基因集合，常用于肝癌等疾病的基因表达分析。",
+      "图片类型": "散点图,条形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa201ClusterCorrelation",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa201ClusterCorrelation/FigureYa201ClusterCorrelation.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13219
+        }
+      ],
+      "需求描述": "该模块根据基因表达数据进行非监督聚类，将基因划分为正负相关基因集，用于识别基因与聚类之间的相关性。",
+      "实用场景": "典型应用于生物医学研究中，如基于基因表达数据对患者进行亚型分类，或分析免疫基因签名与聚类的关系。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa202consensusGene",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa202consensusGene/FigureYa202consensusGene.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13489
+        }
+      ],
+      "需求描述": "该模块旨在通过共识聚类方法，对糖酵解和胆固醇生物合成两个通路的基因进行联合聚类，以识别关键共表达基因集，并基于基因表达中位数将样本划分为四个代谢亚型。",
+      "实用场景": "典型应用于生物医学研究中，如胰腺癌（PDAC）样本的代谢亚型分析，通过整合多个通路基因的表达数据，实现样本的精细分类和可视化展示。",
+      "图片类型": "热图,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa203ComBat",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa203ComBat/FigureYa203ComBat.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12036
+        }
+      ],
+      "需求描述": "该模块旨在实现TCGA RNA-seq数据与不同平台的microarray数据的合并及标准化，以消除批次效应，获得相对统一的处理方式。",
+      "实用场景": "典型应用包括不同平台的表达谱数据去除批次效应，并通过PCA图可视化校正效果，适用于多源生物医学数据整合分析。",
+      "图片类型": "PCA",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa204PCAscore",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa204PCAscore/FigureYa204PCAscore.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13085
+        }
+      ],
+      "需求描述": "该模块旨在实现一种基于Boruta降维和主成分分析（PCA）的签名评分方法，用于构建分子分型相关的特征评分，特别适用于处理免疫检查点抑制剂（ICI）签名数据。",
+      "实用场景": "典型应用包括在生物医学研究中，根据基因表达数据和亚型信息，计算单样本ICI得分以进行分子分型分析；常用于癌症研究中的免疫特征评估和预后签名构建。",
+      "图片类型": "热图,箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa205immunophenoscore_update",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa205immunophenoscore_update/FigureYa205immunophenoscore_update.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16915
+        }
+      ],
+      "需求描述": "该模块旨在实现Immunophenoscore（IPS）算法，计算免疫相关指标（如TMB、TILs和免疫细胞浸润）的综合评分，以丰富免疫分析内容，并输出每个基因z-score后的值到文件。",
+      "实用场景": "典型应用包括计算IPS并绘制免疫表型图，用于癌症免疫基因组分析，预测检查点阻断治疗反应，以及多组对比统计分析或热图可视化。",
+      "图片类型": "环形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa206scHeatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa206scHeatmap/FigureYa206scHeatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16344
+        }
+      ],
+      "需求描述": "该模块旨在通过结合热图和气泡图，直观展示单细胞RNA测序数据中的差异表达基因和功能富集分析结果，帮助用户识别细胞类型特异性标记和信号通路。",
+      "实用场景": "适用于单细胞RNA-seq数据的表达谱分析和基因功能富集结果的可视化，常用于生物医学研究中细胞亚群鉴定和功能注释。",
+      "图片类型": "热图,气泡图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa207Randomization",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa207Randomization/FigureYa207Randomization.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16522
+        }
+      ],
+      "需求描述": "该模块旨在实现随机化检验，用于检测差异表达基因的分布是否随机，通过比较实际差异基因与随机抽样基因在功能基因集中的重叠情况，验证基因分类标签的独立性。",
+      "实用场景": "典型应用于生物医学研究中差异表达基因的模式检验，如验证差异基因是否与特定功能基因集（如癌基因、必需基因）存在非随机关联；也可扩展至任何基因集的随机性检验，例如检验候选基因集在背景基因中的分布显著性。",
+      "图片类型": "随机化检验图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa208FPI",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa208FPI/FigureYa208FPI.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 20732
+        }
+      ],
+      "需求描述": "该模块旨在实现铁死亡指数（FPI）的计算方法，通过基于基因表达数据计算ssGSEA富集分数，然后推导出FPI，并使用GSE121689数据集进行验证。",
+      "实用场景": "适用于批量处理多组数据集（如TCGA泛癌RNA-seq）或分析单个数据集（如GEO表达谱数据），并可自定义其他功能相关基因集来定义类似指数。",
+      "图片类型": "箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa209batchEnrich",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa209batchEnrich/FigureYa209batchEnrich.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 27456
+        }
+      ],
+      "需求描述": "该模块旨在通过批量富集分析，解决用户在选择合适注释数据库时的困难，提供便捷的基因列表富集分析，输出表格和图形结果。",
+      "实用场景": "典型应用包括生物医学研究中比较不同数据库（如GO、KEGG、hallmark）的富集结果，帮助用户快速筛选适合的注释方法，用于论文撰写或深入数据分析。",
+      "图片类型": "柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa210survivalScape",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa210survivalScape/FigureYa210survivalScape.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 23424
+        }
+      ],
+      "需求描述": "该模块旨在使用survdiff方法复现文献中的生存分析图形，并输出所有基因的风险比（HR）和p值到文件。",
+      "实用场景": "典型应用包括利用TCGA泛癌表达数据计算基因集的生存景观，以及批量筛选与患者总生存相关的基因。",
+      "图片类型": "生存曲线,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa211multiCohortImmSubtype",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa211multiCohortImmSubtype/FigureYa211multiCohortImmSubtype.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15833
+        }
+      ],
+      "需求描述": "该模块旨在基于多数据集免疫细胞进行分子分型，而非传统的基因表达分型，输出Fig.1 A和B，包括免疫细胞聚类和生存分析。",
+      "实用场景": "适用于处理不同平台的表达谱数据，去除批次效应后计算免疫富集，进行分子分型与生存分析，典型应用于头颈鳞癌（HNSC）等肿瘤研究。",
+      "图片类型": "热图,生存曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa212drugTargetV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa212drugTargetV2/FigureYa212drugTargetV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 26652
+        }
+      ],
+      "需求描述": "该模块旨在基于药物敏感性数据和基因表达谱，预测癌症亚组（如TP53突变患者）的潜在治疗药物。它通过整合CTRP和PRISM数据库的AUC值，利用pRRophetic算法进行药敏预测，并采用ISOpureR纯化肿瘤表达矩阵以提高准确性。",
+      "实用场景": "典型应用包括在生物医学研究中筛选对特定癌症亚型有效的候选化合物，例如在肝癌（HCC）中识别TP53突变患者的高敏感性药物。它适用于精准医疗场景，通过多角度分析（如CMap、靶点表达差异）验证药物潜力。",
+      "图片类型": "火山图,箱线图,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa213customizeHeatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa213customizeHeatmap/FigureYa213customizeHeatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 17027
+        }
+      ],
+      "需求描述": "该模块旨在实现Figure 6的绘制方法，包括CMap score的计算，用于展示药物筛选结果。",
+      "实用场景": "典型应用于生物医学研究，通过整合多源证据（如PRISM、CTRP、CMap分析、表达差异和文献搜索）来评估化合物在肝癌治疗中的潜在价值。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa214KEGG_hierarchyV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa214KEGG_hierarchyV2/FigureYa214KEGG_hierarchyV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13982
+        }
+      ],
+      "需求描述": "该模块用于解决KEGG富集分析中术语过多且相似的问题，通过提取KEGG的三层注释信息，合理合并和分类富集分析结果，以简化可视化。",
+      "实用场景": "典型应用包括KEGG富集分析后，当结果包含大量冗余术语时，使用该模块进行层次化分类和可视化，适用于生物医学研究中的数据解释。",
+      "图片类型": "条形图,层次图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa215DNAage",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa215DNAage/FigureYa215DNAage.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10975
+        }
+      ],
+      "需求描述": "该模块用于根据DNA甲基化beta值计算甲基化年龄，并与真实年龄比较以确定甲基化年龄加速或减速。",
+      "实用场景": "适用于分析宫颈鳞状细胞癌等疾病中甲基化年龄与肿瘤状态、HPV表达、免疫激活等特征的关系，典型场景包括使用450k或27k甲基化数据进行生物医学研究。",
+      "图片类型": "条形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa216MetaREM",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa216MetaREM/FigureYa216MetaREM.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 5501
+        }
+      ],
+      "需求描述": "该模块用于通过meta分析和随机效应模型整合多个数据集的预后情况，解决从各数据集HR值合并为总HR值的问题，替代STATA软件用R实现。",
+      "实用场景": "适用于只能获取每个队列的HR、LCI、HCI和p值等汇总数据时，进行预后meta分析，典型如生物医学研究中合并多个独立研究的效应量。",
+      "图片类型": "森林图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa217RMR",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa217RMR/FigureYa217RMR.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 7949
+        }
+      ],
+      "需求描述": "该模块基于最大相关最小冗余（mRMR）算法，采用R语言实现图1，用于鉴定差异基因并构建预测模型。",
+      "实用场景": "典型应用包括使用mRMR方法识别差异基因，结合支持向量机和余一交叉验证确定最优基因组合，以构建生物医学预测模型。",
+      "图片类型": "线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa218Elasticnet",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa218Elasticnet/FigureYa218Elasticnet.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 21478
+        }
+      ],
+      "需求描述": "该模块旨在通过弹性网络算法筛选关键变量并构建分类模型，解决生物医学数据分析中的特征选择和分类准确性问题。用户诉求包括生成筛选图、系数图和分类效果图，以评估模型性能。",
+      "实用场景": "典型应用于生物信息学领域，如利用TCGA和GTEx数据区分肝癌与正常组织，构建诊断分类器。适用于需要高精度分类和变量重要性分析的医学研究场景。",
+      "图片类型": "筛选图,系数图,分类效果图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa219GMM",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa219GMM/FigureYa219GMM.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16134
+        }
+      ],
+      "需求描述": "该模块使用高斯混合模型从候选miRNA中筛选关键miRNA，并计算每个miRNA的系数以得到风险评分。",
+      "实用场景": "典型应用于三阴性乳腺癌研究中，通过排列组合构建所有可能的逻辑回归模型，计算AUC并使用高斯混合模型聚类确定最优预测模型。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa220repeatedLasso",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa220repeatedLasso/FigureYa220repeatedLasso.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16372
+        }
+      ],
+      "需求描述": "该模块通过重复Lasso惩罚的Cox比例风险模型筛选基因，构建预测模型，以解决生物医学研究中基因特征选择和生存预测的问题。",
+      "实用场景": "适用于生物信息学分析，特别是在癌症研究中，利用训练集和测试集进行基因模型验证和生存分析。",
+      "图片类型": "条形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa221tenFoldRF",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa221tenFoldRF/FigureYa221tenFoldRF.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8519
+        }
+      ],
+      "需求描述": "该模块旨在实现10折交叉验证的随机森林分析方法，通过递归特征消除（RFE）筛选基因特征，以提升分类准确性。它解决了从预后相关基因中筛选最小签名子集以区分肿瘤与正常组织的需求。",
+      "实用场景": "典型应用于生物医学研究，如使用随机森林和10折交叉验证筛选免疫基因特征，用于癌症预后分析或组织分类。适用于需要高精度特征选择的场景，例如基于表达谱数据的生存预测。",
+      "图片类型": "准确性图,生存曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa222PCAgene",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa222PCAgene/FigureYa222PCAgene.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14018
+        }
+      ],
+      "需求描述": "该模块旨在通过主成分分析（PCA）可视化单细胞RNA-seq数据中的基因表达模式，特别关注卵母细胞亚型在发育阶段的动态变化。它帮助用户识别细胞亚型分布和关键基因的表达趋势。",
+      "实用场景": "典型应用于单细胞RNA-seq数据分析，用于探索细胞亚型与基因表达的关系，例如在卵母细胞发育研究中，通过PCA图展示亚型分离和基因沿主成分的变化。",
+      "图片类型": "PCA,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa223scNMF",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa223scNMF/FigureYa223scNMF.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 24270
+        }
+      ],
+      "需求描述": "该模块旨在对单细胞癌上皮数据中每个样品进行NMF非负矩阵分解，获得programs后进行无监督聚类，定义meta-signature，以解决样品间异质性大、传统聚类方法变异主要来源于样品而非生物学特性的问题。",
+      "实用场景": "典型应用包括鼻咽癌等肿瘤样本分析，通过NMF找出每个样品的生物学功能program，聚类后识别上皮样品间共有的生物学功能改变，如复现文献中的热图展示基因表达特征。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa224scMarker",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa224scMarker/FigureYa224scMarker.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 18167
+        }
+      ],
+      "需求描述": "该模块旨在可视化单细胞数据中的细胞比例和marker基因，帮助用户展示细胞亚群的平均表达量、组织偏好和相对比例。",
+      "实用场景": "适用于单细胞测序数据分析，如展示肿瘤内皮细胞和成纤维细胞的marker基因表达模式，或用于PBMC数据中细胞类型的鉴定和比例分析。",
+      "图片类型": "热图,棒棒糖图,柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa225GiViTl",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa225GiViTl/FigureYa225GiViTl.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16060
+        }
+      ],
+      "需求描述": "该模块旨在使用givitiR包复现学术文章中的校准图，特别是GiViTI校准带，以验证逻辑回归模型的校准性能。",
+      "实用场景": "适用于评估逻辑回归模型的内部和外部校准，常用于生物医学研究中预测模型的验证和可视化。",
+      "图片类型": "GiViTI校准带图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa227boxdensity",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa227boxdensity/FigureYa227boxdensity.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 7219
+        }
+      ],
+      "需求描述": "该模块旨在高逼格地展示两组之间对于索拉菲尼药物治疗敏感性的差异，基于药物敏感性的研究数据。",
+      "实用场景": "适用于绘制箱线图时同时叠加数据的密度分布图，以增强可视化效果，常用于生物医学数据分析中比较不同组别的药敏差异。",
+      "图片类型": "箱线图,密度图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa228linkCor",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa228linkCor/FigureYa228linkCor.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15310
+        }
+      ],
+      "需求描述": "该模块用于可视化相关性分析结果，特别是展示一个基因与多个通路之间的相关性，并支持多组对比。",
+      "实用场景": "典型应用包括展示单个基因与免疫治疗预测通路或癌症相关签名之间的相关性，适用于生物医学研究中的数据解释和论文图表生成。",
+      "图片类型": "热图,连线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa229PCOA",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa229PCOA/FigureYa229PCOA.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 19217
+        }
+      ],
+      "需求描述": "该模块旨在将PCOA散点图转换为以组均值和标准误表示的图形，以解决样本过多时散点重叠难以辨认的问题。用户诉求是清晰展示高维数据降维后的分组差异，并突出特定特征。",
+      "实用场景": "适用于处理高维生物医学数据（如转录组表达矩阵）的可视化，特别是在分组多、样本量大时，用于比较不同亚型或队列间的微生物组成差异。典型应用包括展示肠道菌群在疾病状态下的变化，并辅以PERMANOVA检验验证显著性。",
+      "图片类型": "PCOA散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa230immunelandscape",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa230immunelandscape/FigureYa230immunelandscape.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 18767
+        }
+      ],
+      "需求描述": "该模块旨在实现多种算法的风险值与免疫细胞相关性热图的绘制，具体参考文中Figure 7。用户诉求是整合不同免疫富集分析算法的结果，生成综合热图以展示风险组间的免疫响应差异。",
+      "实用场景": "典型应用包括绘制不同免疫富集分析（如CIBERSORT、ESTIMATE、MCPcounter、ssGSEA、TIMER）结果的综合热图，也可用于WGCNA和多组学分析结果的展示。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa231scScore",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa231scScore/FigureYa231scScore.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12108
+        }
+      ],
+      "需求描述": "该模块用于对单细胞数据进行t-SNE降维可视化，并标记基因本体（GO）功能，以展示细胞类型与生物过程之间的关系。",
+      "实用场景": "适用于单细胞RNA测序数据分析，如比较GBM和对照细胞中巨噬细胞亚型的分布，或探索信号传导、血管生成等GO通路在细胞亚群中的表达模式。",
+      "图片类型": "t-SNE图,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa232scRankHeatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa232scRankHeatmap/FigureYa232scRankHeatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14147
+        }
+      ],
+      "需求描述": "该模块用于展示单细胞RNA-seq中富集的上调和下调基因，替代常规的柱状图或点状图，提供更高级的热图可视化，适用于差异分析结果的构图需求。",
+      "实用场景": "典型应用包括单细胞RNA-seq表达谱和基因功能富集分析结果的展示，如比较不同细胞类型中上下调基因的分布，常用于生物医学研究中的差异表达分析。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa233genepair",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa233genepair/FigureYa233genepair.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 21372
+        }
+      ],
+      "需求描述": "该模块旨在帮助用户按照文献方法构建基因对预后模型，通过相对基因表达排序而非绝对表达值，实现平台独立的预后建模。",
+      "实用场景": "适用于生物医学研究中，检测个体患者中差异表达lncRNA，特别是在癌症样本高异质性背景下，构建稳健的预后模型，并应用于独立数据集验证。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa234panImmune",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa234panImmune/FigureYa234panImmune.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 18027
+        }
+      ],
+      "需求描述": "该模块旨在利用UCSC的泛癌数据，通过EPIC和Cibersort算法计算各肿瘤的免疫细胞浸润信息，并输出结果。同时，计算指定基因与免疫细胞在泛癌中的相关性，生成相关性热图和Excel表格。",
+      "实用场景": "典型应用包括使用TIMER、EPIC和Cibersort方法分析免疫细胞浸润，热图展示基因与免疫浸润的关系，适用于生物医学研究中的免疫学数据分析。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa235scDEG",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa235scDEG/FigureYa235scDEG.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16133
+        }
+      ],
+      "需求描述": "该模块用于在单细胞测序数据中，对不同cluster进行差异表达基因（DEGs）分析，并生成点图以可视化log2FC和显著性。",
+      "实用场景": "典型应用包括展示各cluster的marker基因表达趋势分布，可标注显著上调或下调基因，或特定通路相关基因。",
+      "图片类型": "点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa236circGroup",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa236circGroup/FigureYa236circGroup.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 7958
+        }
+      ],
+      "需求描述": "该模块旨在用圆圈图展示不同分组之间的关系，解决用户无法在网上找到现成R代码实现此类可视化的问题。",
+      "实用场景": "典型应用包括展示亚型或其他分类变量之间的映射关系，如PDAC代谢亚型与基因表达亚型的一致性分析。",
+      "图片类型": "环形图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa237circVenn",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa237circVenn/FigureYa237circVenn.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10544
+        }
+      ],
+      "需求描述": "该模块用于绘制环形韦恩图，展示多组之间的重叠基因和每组特有基因，解决用户对基因表达重叠可视化的需求。",
+      "实用场景": "适用于生物医学研究中比较多组基因表达数据，如展示植物器官或癌症样本的基因表达重叠情况，尤其当组数较多时使用环形布局增强可读性。",
+      "图片类型": "环形图,韦恩图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa238corRiskMut",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa238corRiskMut/FigureYa238corRiskMut.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 22306
+        }
+      ],
+      "需求描述": "该模块旨在建立预后模型后，识别高低风险组中突变最显著的基因，并计算风险评分与有义和错义突变的相关性。",
+      "实用场景": "典型应用于生物医学研究，如分析肿瘤突变状态与免疫浸润或预后风险的关系，例如在LUAD患者中探究TMErisk相关机制。",
+      "图片类型": "散点图,箱线图,森林图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa239ST_PDAC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa239ST_PDAC/FigureYa239ST_PDAC.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 26755
+        }
+      ],
+      "需求描述": "该模块旨在复现单细胞空间转录组研究中的Figure 2，通过整合单细胞和空间转录组数据，解决ST技术无法达到单细胞分辨率以及scRNA-seq无法进行空间定位的问题。",
+      "实用场景": "典型应用包括生物医学研究中分析胰腺导管腺癌（PDAC）样本，使用MIA算法整合单细胞和空间转录组数据，以识别细胞类型在空间上的富集模式。",
+      "图片类型": "空间表达图,聚类图,MIA热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa240CRISPR",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa240CRISPR/FigureYa240CRISPR.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12388
+        }
+      ],
+      "需求描述": "该模块旨在利用CRISPR数据库筛选影响特定肿瘤细胞生长的基因，并结合TCGA数据库进行验证，以指导湿实验研究。",
+      "实用场景": "典型应用包括癌症依赖关系图谱分析，如结合CRISPR筛选和TCGA表达数据对肺癌进行分子分型，识别易受特定治疗影响的肿瘤亚型。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa241scRNA_NMI",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa241scRNA_NMI/FigureYa241scRNA_NMI.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 22141
+        }
+      ],
+      "需求描述": "该模块旨在使用R语言实现单细胞转录组数据中转录同质性（NMI）的可视化，具体目标是复现文献中的图1E或其他NMI相关图形，以评估样本内细胞间的转录相似性。",
+      "实用场景": "典型应用包括利用单细胞RNA测序数据评估同一时间点肿瘤样本的转录异质性，例如在肺癌演化研究中分析不同阶段样本的细胞间NMI值变化。",
+      "图片类型": "箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa242corMethExpr",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa242corMethExpr/FigureYa242corMethExpr.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 11127
+        }
+      ],
+      "需求描述": "该模块用于分析FPKM与启动子区甲基化的相关性，输入数据为TCGA的FPKM和DNA甲基化数据。用户希望学习如何获取基因启动子区的甲基化探针，并能灵活自定义启动子区域（如TSS1500、TSS200）或分析基因体甲基化与表达的关系。",
+      "实用场景": "典型应用是计算特定基因启动子DNA甲基化与对应表达谱的相关性并绘图，适用于生物医学研究中的数据解释和效率提升。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa243scMarkerGroupHeatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa243scMarkerGroupHeatmap/FigureYa243scMarkerGroupHeatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10658
+        }
+      ],
+      "需求描述": "该模块用于比较两组之间marker基因的表达高低，调整顺序后绘制热图。主要解决单细胞RNA测序数据中不同cluster细胞类型marker基因表达模式的可视化问题。",
+      "实用场景": "典型应用包括展示单细胞marker基因在多个cluster中的表达模式，适用于生物医学研究中细胞类型鉴定和差异表达分析。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa244PCAPlot",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa244PCAPlot/FigureYa244PCAPlot.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 5703
+        }
+      ],
+      "需求描述": "该模块用于对基因表达数据进行聚类分析，并在PCA图上标注聚类结果，以可视化基因表达模式。",
+      "实用场景": "适用于生物医学研究中，如分析胰腺癌（PDAC）的基因表达数据，进行预后分层和分子特征可视化。",
+      "图片类型": "PCA",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa245VarDecompose",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa245VarDecompose/FigureYa245VarDecompose.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15115
+        }
+      ],
+      "需求描述": "该模块旨在通过方差分解方法分析基因表达在物种间的保守性，具体实现文献Fig.2b的绘图，用于衡量组织和物种对基因表达方差的相对贡献。",
+      "实用场景": "适用于研究非编码RNA等基因在不同物种（如人和鼠）间的表达保守性，帮助评估小鼠作为模式生物时结论的泛化性，需谨慎处理表达不保守的基因。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa246supervisedGDSC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa246supervisedGDSC/FigureYa246supervisedGDSC.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 18448
+        }
+      ],
+      "需求描述": "该模块旨在通过聚类分析TCGA数据集，将GDSC细胞系按TCGA聚类结果分组，并比较各组药物敏感性，使用AUC进行定量分析，以识别在特定基因分类簇中疗效差异显著的药物。",
+      "实用场景": "典型应用于生物医学研究，如肺癌药物发现，通过整合TCGA和GDSC数据库，推断癌症亚型的药物敏感性，指导潜在治疗策略。",
+      "图片类型": "热图,箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa247oncoPredict",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa247oncoPredict/FigureYa247oncoPredict.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 18381
+        }
+      ],
+      "需求描述": "该模块旨在使用oncoPredict包（pRRophetic的升级版）通过表达谱数据预测肿瘤样本的药物敏感性，解决用户对药物响应评估的需求。",
+      "实用场景": "典型应用包括基于细胞系表达谱（如GDSC或CTRP数据）和临床样本表达数据（如TCGA），构建模型预测药物IC50或AUC值，适用于癌症研究中的药物筛选和个性化治疗分析。",
+      "图片类型": "箱线图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa248MutLandscape",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa248MutLandscape/FigureYa248MutLandscape.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 24533
+        }
+      ],
+      "需求描述": "该模块旨在实现一篇分子分型文章中Figure2b的突变综合性热图，用于展示基因组变异景观，包括TMB、突变签名、突变基因和拷贝数变异等分析结果。",
+      "实用场景": "典型应用包括在生物医学研究中可视化不同分子亚型的突变模式，例如在膀胱癌研究中展示各亚型的突变特征和拷贝数变化。这种组合热图也可用于其他类型数据的合并展示。",
+      "图片类型": "热图,柱状图,瀑布图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa249Regulon",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa249Regulon/FigureYa249Regulon.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12853
+        }
+      ],
+      "需求描述": "该模块用于计算转录调控网络regulon的活性，并绘制热图展示各亚型中regulon的活性规律，以探讨转录调控机制。",
+      "实用场景": "适用于生物医学研究中，将表达数据与转录因子、染色质重塑调控因子和甲基化分析结合，分析分子亚型间的差异调控模式。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa250ImmGenePair",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa250ImmGenePair/FigureYa250ImmGenePair.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13088
+        }
+      ],
+      "需求描述": "该模块旨在复现基于免疫相关基因对（IRGPs）构建个体化预后特征的算法，重点关注第一段计算，即通过基因表达谱生成IRGP评分，并筛选具有预后意义的基因对。",
+      "实用场景": "适用于生物医学研究中构建基因对模型，例如在肿瘤预后分析中，用户可基于免疫基因表达数据生成IRGP矩阵，并后续结合lasso等模型进行特征选择。",
+      "图片类型": "散点图,箱线图,热图,生存曲线,条形图,风险表,诺莫图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa251NPHSurv",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa251NPHSurv/FigureYa251NPHSurv.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13533
+        }
+      ],
+      "需求描述": "该模块旨在使用非比例风险生存模型（NPHSurv）评估接受免疫治疗患者的预后差异，特别关注延迟效应，通过计算限制性生存均值（RMS）和长期生存率来比较不同亚型患者的生存情况。",
+      "实用场景": "典型应用于临床研究，用于分析免疫治疗队列（如IMvigor210队列）中不同亚型患者的生存预后，帮助识别高风险或耐药亚型，支持免疫治疗效果的精准评估。",
+      "图片类型": "生存曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa252mclust",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa252mclust/FigureYa252mclust.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8370
+        }
+      ],
+      "需求描述": "该模块旨在实现一篇论文中的Fig4A，生成一个好看的聚类图，用于展示基因表达数据的时间序列聚类结果。",
+      "实用场景": "适用于展示多时间点数据，如多个发育时期或生物/非胁迫处理后多个时间点的基因表达变化，便于观察每个聚类中基因随时间的表达规律。",
+      "图片类型": "聚类图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa253panGSEA",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa253panGSEA/FigureYa253panGSEA.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15481
+        }
+      ],
+      "需求描述": "该模块基于FPI最高30%和最低30%的两个肿瘤组的转录组数据，对每个肿瘤进行基因集富集分析(GSEA)，研究高FPI和低FPI肿瘤组织之间的通路差异。",
+      "实用场景": "典型应用包括根据基因表达量或基因集富集得分给样本分组，进行差异表达分析后使用GSEA推断相关通路，适用于生物医学研究中的通路关联分析。",
+      "图片类型": "泡泡图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa254scViolin",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa254scViolin/FigureYa254scViolin.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14579
+        }
+      ],
+      "需求描述": "该模块用于生成小提琴图，以比较不同特征下的基因表达量分布，特别适用于展示多组数据的差异。",
+      "实用场景": "典型应用包括单细胞或非单细胞数据中，同时对比细胞类型、marker基因和年龄等三种特征下的表达分布，如生物医学研究中的差异分析。",
+      "图片类型": "小提琴图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa255TIME",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa255TIME/FigureYa255TIME.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16228
+        }
+      ],
+      "需求描述": "该模块旨在计算DNA甲基化淋巴细胞定量（MeTIL）得分，并基于免疫检查点表达和肿瘤免疫微环境富集绘制热图，以可视化免疫景观。",
+      "实用场景": "典型应用于肌肉浸润性膀胱癌（MIBC）等肿瘤研究中，通过整合多组学数据（如甲基化和表达数据）来分析免疫特征，适用于生物医学数据解释和科研效率提升。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa256panelLink",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa256panelLink/FigureYa256panelLink.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10318
+        }
+      ],
+      "需求描述": "该模块旨在实现一个复杂的生物医学数据可视化图，将药物与基因关联、分子特征和癌症类型整合在一个图中，通过连线连接左右两个面板，展示多维数据关系。",
+      "实用场景": "典型应用于生物医学研究，如分析药物敏感性、基因表达与癌症类型的关系，适用于多组学数据整合和临床前研究。",
+      "图片类型": "连线图,散点图,柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa257armCNV",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa257armCNV/FigureYa257armCNV.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15614
+        }
+      ],
+      "需求描述": "该模块用于比较Im-H和Im-L两个组在臂水平扩增和缺失频率以及焦点水平扩增和缺失水平上的差异，并绘制相应的图表。",
+      "实用场景": "适用于生物医学研究中分析不同免疫亚型（如黑色素瘤的Im-H和Im-L）的拷贝数变异数据，进行统计检验和可视化。",
+      "图片类型": "柱状图,折线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa258SNF",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa258SNF/FigureYa258SNF.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8392
+        }
+      ],
+      "需求描述": "该模块旨在使用多组学数据（如DNA甲基化和基因表达数据）联合识别疾病亚组，通过相似网络融合（SNF）方法进行聚类分析。",
+      "实用场景": "典型应用包括对多组学数据进行联合聚类，例如在癌症研究中识别疾病亚型或亚组，基于SNF算法整合不同组学数据。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa259circLink",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa259circLink/FigureYa259circLink.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14624
+        }
+      ],
+      "需求描述": "该模块用于绘制连线图，展示miRNA与靶基因或基因与药物等生物分子之间的关系，通过连线和节点的颜色区分不同组别（如高/低WM评分组）。",
+      "实用场景": "适用于生物医学研究中可视化miRNA-靶基因相互作用、基因-药物关联等网络关系，典型应用于TCGA队列分析或癌细胞系药物敏感性研究。",
+      "图片类型": "连线图,环形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa260CNV",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa260CNV/FigureYa260CNV.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9971
+        }
+      ],
+      "需求描述": "该模块用于绘制CNV（拷贝数变异）图，展示基因的CNV增益、缺失和非CNV频率。",
+      "实用场景": "适用于外显子测序或RNA-seq数据分析，帮助识别关键基因的拷贝数变异，例如在TCGA-COAD/READ队列中分析RNA修饰相关基因的CNV频率。",
+      "图片类型": "堆积条形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa261circGene",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa261circGene/FigureYa261circGene.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 7565
+        }
+      ],
+      "需求描述": "该模块用于绘制基因位置的环形图，将感兴趣的基因标注在基因组上，并展示基因的数值特征。",
+      "实用场景": "适用于在基因组上可视化基因位置和表达量，典型应用包括标注多个基因并展示其分类或变化倍数，也可用于展示基因间关系。",
+      "图片类型": "环形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa262GDC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa262GDC/FigureYa262GDC.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 6780
+        }
+      ],
+      "需求描述": "该模块旨在可视化TCGA泛癌数据中特定基因的突变频率，帮助用户快速生成类似于补充材料中Figure S2A的图形，展示RNA修饰'writers'基因在33种癌症类型中的突变分布。",
+      "实用场景": "典型应用包括生物医学研究中分析TCGA队列的基因突变模式，适用于癌症基因组学领域，用户只需提供感兴趣的基因名即可生成突变频率图。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa263panDiff",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa263panDiff/FigureYa263panDiff.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14296
+        }
+      ],
+      "需求描述": "该模块旨在实现铁死亡基因在泛癌中肿瘤与正常组织的差异表达分析，并生成拼接的点图和柱状图，以可视化差异表达基因的数量和表达变化。",
+      "实用场景": "适用于生物医学研究中分析基因表达差异，特别是在泛癌背景下比较肿瘤和正常样本，用于铁死亡或其他通路基因的差异表达可视化。",
+      "图片类型": "柱状图,点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa264epiImmune",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa264epiImmune/FigureYa264epiImmune.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13657
+        }
+      ],
+      "需求描述": "该模块旨在复现一篇论文中的Figure 1A，展示表观遗传调节因子表达与细胞毒性T淋巴细胞（CTL）评分之间的相关性。具体解决如何计算CTL评分、识别高CD8+ T细胞浸润样本、实现相关性分析并绘制柱状图的问题。",
+      "实用场景": "典型应用包括从TCGA数据库下载黑色素瘤数据，使用TIMER方法评估免疫细胞浸润，分析表观遗传因子与免疫细胞功能的相关性，适用于生物医学研究中的机制探索和可视化展示。",
+      "图片类型": "柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa265panCNV",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa265panCNV/FigureYa265panCNV.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12451
+        }
+      ],
+      "需求描述": "该模块旨在实现铁死亡相关基因在泛癌中的体细胞拷贝数变异分析，并生成条形图展示各癌种中每个基因的变异频率。用户诉求是复现学术论文Figure 1A的代码，并扩展至其他类似通路分析。",
+      "实用场景": "典型应用于生物医学研究，如泛癌分析中探索铁死亡基因的拷贝数变异模式，适用于癌症基因组学数据可视化和高通量数据分析。",
+      "图片类型": "条形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa266panHeatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa266panHeatmap/FigureYa266panHeatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16560
+        }
+      ],
+      "需求描述": "该模块旨在复现文献中Figure 1E-F的图形，使用原始数据进行泛癌差异表达分析，以展示m6A调控因子在肿瘤与正常样本中的表达变化。",
+      "实用场景": "适用于生物医学研究中，对多个基因（如m6A调控因子）在泛癌数据集上进行差异表达分析，并可视化log2FoldChange热图和特定基因的箱线图。",
+      "图片类型": "热图,箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa267scCellChat",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa267scCellChat/FigureYa267scCellChat.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 23884
+        }
+      ],
+      "需求描述": "该模块旨在使用CellChat工具分析单细胞RNA-seq数据，比较两组样本（如原发vs.转移、不同亚型或发育阶段）之间的细胞间通讯差异，特别是基于受体-配体相互作用。",
+      "实用场景": "典型应用包括比较癌症原发与转移样本的免疫细胞通讯、分析不同疾病亚型或发育时期的细胞间信号通路变化。",
+      "图片类型": "网络图,热图,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa268panCNVexpr",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa268panCNVexpr/FigureYa268panCNVexpr.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16243
+        }
+      ],
+      "需求描述": "该模块旨在实现铁死亡基因在泛癌分析中体细胞拷贝数与基因表达的相关性可视化，具体针对Figure 1C的绘制，以帮助用户探索基因调控机制。",
+      "实用场景": "适用于生物医学研究，特别是泛癌数据分析，用于评估基因拷贝数变异与表达水平的相关性，支持铁死亡等通路的功能研究。",
+      "图片类型": "散点图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa269scMetabolism",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa269scMetabolism/FigureYa269scMetabolism.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16108
+        }
+      ],
+      "需求描述": "该模块旨在使用scMetabolism工具对单细胞RNA-seq数据进行代谢分析，并生成可视化图形。它帮助用户挖掘单细胞水平的代谢活性，并友好地集成到Seurat分析流程中。",
+      "实用场景": "典型应用包括分析单细胞RNA-seq数据中的代谢通路活性，例如在免疫细胞或肿瘤微环境中识别差异代谢特征。适用于生物医学研究，如探索细胞类型特异性代谢变化。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa270panMeth",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa270panMeth/FigureYa270panMeth.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 18248
+        }
+      ],
+      "需求描述": "该模块旨在实现铁死亡基因在泛癌中肿瘤与正常组织甲基化状态的差异分析，并绘制可视化图形。用户诉求是复现学术论文Figure 1D的代码，具体为铁死亡基因启动子甲基化在肿瘤与正常样本中的差异点图。",
+      "实用场景": "典型应用于生物医学研究，如分析铁死亡通路基因在多种癌症类型中的甲基化变化，适用于泛癌数据分析、基因表达调控研究和学术论文图表生成。",
+      "图片类型": "点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa271panMethExpr",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa271panMethExpr/FigureYa271panMethExpr.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 21470
+        }
+      ],
+      "需求描述": "该模块旨在实现铁死亡基因在泛癌中转录组表达与启动子甲基化相关性的可视化，具体针对文献Figure 1E的复现，通过点图展示相关性。",
+      "实用场景": "适用于生物医学研究中分析基因表达与甲基化关联的泛癌分析，如铁死亡通路研究，帮助用户快速生成标准化图形。",
+      "图片类型": "点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa272scBulkCCCI",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa272scBulkCCCI/FigureYa272scBulkCCCI.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 23873
+        }
+      ],
+      "需求描述": "该模块基于细胞类型特征基因识别细胞-细胞互作，通过整合单细胞RNA测序和批量RNA测序数据，构建相关性网络以分析细胞亚型间的相互作用。",
+      "实用场景": "典型应用包括利用scRNA-seq识别的特征基因推断bulk RNA-seq样本中的细胞类群互作网络，适用于生物医学研究中的免疫细胞相互作用分析，如肿瘤微环境研究。",
+      "图片类型": "网络图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa273BAPC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa273BAPC/FigureYa273BAPC.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15183
+        }
+      ],
+      "需求描述": "该模块用于进行贝叶斯-年龄-时期-队列预测分析，并绘制特定论文中的Figure 3，展示观察值和预测值的趋势。",
+      "实用场景": "典型应用于生物医学研究，如分析胃癌等疾病的年龄标准化发病率趋势，进行跨国家或地区的预测。",
+      "图片类型": "趋势线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa274MuSiCbulkProop",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa274MuSiCbulkProop/FigureYa274MuSiCbulkProop.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 22224
+        }
+      ],
+      "需求描述": "该模块旨在使用MuSiC反卷积方法，根据单细胞数据和bulk数据预测bulk样本中的细胞类型占比。它解决了从混合样本中推断细胞组成的问题，帮助用户无需预分组即可分析细胞类型比例。",
+      "实用场景": "典型应用包括分析PBMC控制/IFNB刺激数据集，预测随机生成的bulk数据中细胞类型分布；也适用于使用预分组细胞类型和自定义marker列表的场景，如小鼠数据集分析。",
+      "图片类型": "热图,抖动图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa275scAUCell",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa275scAUCell/FigureYa275scAUCell.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15362
+        }
+      ],
+      "需求描述": "该模块用于在单细胞数据中使用AUCell包计算自定义基因集的评分，并可视化结果。具体针对ISG（干扰素刺激基因）活性评分进行分析，识别高评分细胞类型。",
+      "实用场景": "适用于单细胞转录组数据分析，如计算基因集活性评分、比较不同细胞类型的基因表达差异。典型应用包括生物医学研究中的细胞功能状态评估和差异表达分析。",
+      "图片类型": "UMAP图,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa276panSNV",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa276panSNV/FigureYa276panSNV.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14841
+        }
+      ],
+      "需求描述": "该模块旨在复现泛癌单核苷酸变异（SNV）分析，解决用户对特定基因（如褪黑素调节因子）在多种癌症中突变频率和类型进行可视化的需求。",
+      "实用场景": "典型应用包括分析泛癌中特定通路基因的突变情况，例如在TCGA数据集中评估褪黑素相关基因的突变分布和模式。",
+      "图片类型": "热图,突变景观图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa277Immunomodulator",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa277Immunomodulator/FigureYa277Immunomodulator.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 22393
+        }
+      ],
+      "需求描述": "该模块旨在复现特定癌种中免疫调节因子的多组学分析图（如Figure 6A），允许灵活调整亚型数量（如3、4或6类），以展示基因表达、甲基化、拷贝数变异等数据。",
+      "实用场景": "典型应用于肿瘤亚型研究，例如在乳腺癌PAM50分型中，分析免疫调节基因的表达、甲基化相关性和拷贝数变异频率，帮助揭示亚型间的分子特征差异。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa278heatmapPoints",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa278heatmapPoints/FigureYa278heatmapPoints.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15656
+        }
+      ],
+      "需求描述": "该模块用于生成热图与气泡图叠加的图形，其中热图和气泡图使用两套不同的数据，以同时展示同一对象的两种特征。",
+      "实用场景": "典型应用包括同时展示多个基因在多个样本中的表达量和DNA甲基化水平等，作为上下三角图的更好替代品。",
+      "图片类型": "热图,气泡图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa279panGeneGSEA",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa279panGeneGSEA/FigureYa279panGeneGSEA.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 12627
+        }
+      ],
+      "需求描述": "该模块旨在将单基因多通路的泛癌富集分析修改为多基因单通路的泛癌富集分析，即Y轴显示基因，X轴显示癌种，以展示特定通路在不同癌种中的基因富集情况。",
+      "实用场景": "适用于基于两组特定基因数据，对多个肿瘤类型进行单基因集富集分析，以可视化特定通路在泛癌背景下的富集模式。",
+      "图片类型": "气泡图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa280TMEofSTS",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa280TMEofSTS/FigureYa280TMEofSTS.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15722
+        }
+      ],
+      "需求描述": "该模块旨在分析软组织肉瘤（STSs）的肿瘤微环境（TME），通过计算免疫富集得分和进行聚类分型，以揭示不同亚型间的免疫特征差异。",
+      "实用场景": "典型应用包括使用TCGA-SARC表达数据，通过MCPcounter计算免疫细胞浸润得分，并基于聚类结果生成热图进行可视化，适用于生物医学研究中的肿瘤免疫分析。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa281wheel",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa281wheel/FigureYa281wheel.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9614
+        }
+      ],
+      "需求描述": "该模块旨在用R语言绘制多角图（wheel plot），以可视化数据点到多个角的数值关系，例如在九个角的情况下，通过点的位置表示与各角的距离。",
+      "实用场景": "特别适用于具有两种独立分组方式的数据，如外围角代表第一分组，点颜色和形状代表第二分组，距离表示数值大小；常用于生物医学研究中的细胞类型分析或原型评分可视化。",
+      "图片类型": "轮状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa282CMAP_XSum",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa282CMAP_XSum/FigureYa282CMAP_XSum.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13924
+        }
+      ],
+      "需求描述": "该模块旨在提供一个基于eXtreme Sum (XSum)方法的CMap分析工具，用于替代传统Kolmogorov-Smirnov方法，以更准确地预测能够逆转疾病分子特征的候选药物。",
+      "实用场景": "典型应用包括使用疾病（如癌症）的差异表达基因特征与药物扰动数据库（如CMap或LINCS）进行匹配，识别潜在治疗药物；适用于生物医学研究中的药物重定位和机制探索。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa283vennyPvalue",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa283vennyPvalue/FigureYa283vennyPvalue.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 6537
+        }
+      ],
+      "需求描述": "该模块主要解决用户对韦恩图中多个数据集交集进行精确检验并计算p值的需求，帮助用户理解交集是否具有统计学显著性。",
+      "实用场景": "典型应用包括生物医学研究中分析多个基因集或通路集的交集显著性，例如比较不同PDX模型中激活通路的重叠情况。",
+      "图片类型": "韦恩图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa284pairwiseLogrank",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa284pairwiseLogrank/FigureYa284pairwiseLogrank.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 6696
+        }
+      ],
+      "需求描述": "该模块旨在绘制生存分析图形，特别是针对三组及以上亚组的生存曲线，并展示配对比较的统计结果，以帮助用户直观比较不同亚组的生存差异。",
+      "实用场景": "典型应用于生物医学研究，如癌症患者生存分析，用于比较不同分子亚型（如PAM50分型）对生存期的影响，并生成包含配对统计表格的生存曲线图。",
+      "图片类型": "生存曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa285scRNA_monocle",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa285scRNA_monocle/FigureYa285scRNA_monocle.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14127
+        }
+      ],
+      "需求描述": "该模块旨在使用monocle2包在单细胞数据中预测细胞发育轨迹，并可视化拟时间轨迹图。",
+      "实用场景": "适用于分析单细胞RNA测序数据，特别是对存在发育关系的细胞群进行轨迹预测，如细胞分化或发育过程的研究。",
+      "图片类型": "拟时间轨迹图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa286ExprCorORR",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa286ExprCorORR/FigureYa286ExprCorORR.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10074
+        }
+      ],
+      "需求描述": "该模块用于分析基因表达量与肿瘤客观缓解率（ORR）的相关性，主要解决数据来源、下载及纵坐标计算等难点。",
+      "实用场景": "适用于绘制某感兴趣变量（如基因表达）与肿瘤ORR的相关性图，直接使用预计算的21种TCGA癌症ORR数据。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa287L2logV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa287L2logV2/FigureYa287L2log.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 36997
+        }
+      ],
+      "需求描述": "该模块旨在实现嵌套交叉验证、Holm-Bonferroni多重假设检验校正和L2正则化分类器，用于比较不同模型的AUROC性能，以评估生物医学数据中预测模型的准确性和稳健性。",
+      "实用场景": "典型应用于生物医学研究，如分析治疗前和治疗中活检数据的预测模型性能，比较不同标志物组合对病理完全缓解的预测能力。",
+      "图片类型": "ROC曲线",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa288MutualExclusivity",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa288MutualExclusivity/FigureYa288MutualExclusivity.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15726
+        }
+      ],
+      "需求描述": "该模块用于分析基因突变之间的互斥性或共现性，通过计算基因对的Odds Ratio和P值来评估其相关性。重点解决基因突变模式（竞争或共生）的统计验证问题。",
+      "实用场景": "典型应用于生物医学研究中的突变数据分析，如TCGA数据库的基因互斥性分析，适用于评估癌症中基因突变的相关性模式。",
+      "图片类型": "热图,瀑布图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa289TILSig",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa289TILSig/FigureYa289TILSig.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 31271
+        }
+      ],
+      "需求描述": "该模块旨在复现利用纯化细胞系计算免疫相关指数的计算方法，特别是肿瘤浸润免疫相关lncRNA特征（TILSig）的构建过程。",
+      "实用场景": "适用于从表达数据中鉴定肿瘤免疫浸润相关lncRNA，构建预后签名，并应用于生物医学研究中的数据分析与可视化。",
+      "图片类型": "主成分分析图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa290BarGraph",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa290BarGraph/FigureYa290BarGraph.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8945
+        }
+      ],
+      "需求描述": "该模块旨在帮助用户绘制单细胞数据中的细胞比例柱状图，并解决如何对柱状图中不同分组的百分比进行统计检验的问题，特别是实现Fisher精确检验和事后检验。",
+      "实用场景": "适用于单细胞RNA测序数据分析，用于比较不同实验组（如WT和KO）在细胞聚类中的比例差异，并进行富集检验，常见于生物医学研究中的细胞类型比例可视化。",
+      "图片类型": "堆叠柱状图,柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa291PancanProgSigatureV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa291PancanProgSigatureV2/FigureYa291PancanProgSigatureV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 19676
+        }
+      ],
+      "需求描述": "该模块基于中性粒细胞胞外诱捕网（NETs）的基因签名，使用LASSO回归在泛癌数据中计算风险得分，并评估该得分与预后的相关性，生成风险得分和风险比（HR）等统计量。",
+      "实用场景": "适用于泛癌分析中计算感兴趣得分（如NETs评分）并分析其预后价值，典型应用包括重现研究论文中的相关图表，如风险得分分布和预后关联图。",
+      "图片类型": "散点图,小提琴图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa292HCCsubtype",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa292HCCsubtype/FigureYa292HCCsubtype.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 17317
+        }
+      ],
+      "需求描述": "该模块主要解决基于表达谱对肝癌（HCC）样本进行分子亚型分类的问题，通过比较不同分类器（如NTP预测和iCluster）与当前分型的一致性，并计算统计显著性。",
+      "实用场景": "典型应用包括在生物医学研究中，利用公共数据（如TCGA）对HCC样本进行聚类分析，验证新分类方法或比较已有亚型标记的预测效果。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa293machineLearning",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa293machineLearning/FigureYa293machineLearning.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 71934
+        }
+      ],
+      "需求描述": "该模块用于比较不同机器学习模型和算法在生物医学数据中的预测性能，通过可视化展示模型评估结果。",
+      "实用场景": "适用于生物信息学研究中，基于基因表达数据构建和验证生存预测模型，例如在癌症预后分析中比较多种算法的C-index。",
+      "图片类型": "Kaplan-Meier曲线,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa294HCCdrug",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa294HCCdrug/FigureYa294HCCdrug.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 26017
+        }
+      ],
+      "需求描述": "该模块旨在复现文献中的Figure 4DE，通过相关性分析识别与PPS评分相关的药物靶点，以支持肝细胞癌的精准治疗预测。",
+      "实用场景": "典型应用于肝细胞癌研究中，筛选高PPS评分患者的潜在药物靶点；用户可替换PPS基因集为自定义基因集，适用于其他癌症或疾病的数据分析。",
+      "图片类型": "火山图,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa295ClassDiscovery",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa295ClassDiscovery/FigureYa295ClassDiscovery.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 14065
+        }
+      ],
+      "需求描述": "该模块旨在实现一种聚类分析方法，重现文献中的分组策略（如C1、C2A、C2B），并将其应用于用户自己的数据，以支持疾病亚型发现。",
+      "实用场景": "适用于生物医学研究中的疾病亚型分类，如肝母细胞瘤的分子分型，通过共识聚类和特征基因分析进行样本分组。",
+      "图片类型": "树状图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa296VIPER",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa296VIPER/FigureYa296VIPER.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 17722
+        }
+      ],
+      "需求描述": "该模块用于计算转录因子活性，基于RNA数据推断转录因子的调控活性，并比较肿瘤与正常样本间的差异。",
+      "实用场景": "适用于将转录组表达矩阵转换为调控因子活性矩阵，并可视化结果，常用于生物医学研究中转录调控网络的分析。",
+      "图片类型": "VIPER图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa297Rbar",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa297Rbar/FigureYa297Rbar.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9517
+        }
+      ],
+      "需求描述": "该模块旨在复现具有渐变填充效果的柱状图，帮助用户学习如何用R实现美观的柱状图，特别是针对那些希望提升图表视觉吸引力的用户。",
+      "实用场景": "适用于需要制作具有渐变效果的柱状图的场景，如学术论文、报告或演示中，当用户或上级偏好办公软件风格的审美时，可以使用此模块来替代R默认的简约柱状图。",
+      "图片类型": "柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa298ecdfPvalue",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa298ecdfPvalue/FigureYa298ecdfPvalue.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9386
+        }
+      ],
+      "需求描述": "该模块重点解决如何计算和可视化两组或多组数据分布之间的p值，使用Wilcoxon秩和检验或Kruskal-Wallis检验进行统计比较。",
+      "实用场景": "典型应用包括生物医学研究中比较不同实验条件下基因表达或特征评分的分布差异，例如在RNA干扰实验中分析目标基因的累积频率分布。",
+      "图片类型": "经验累积分布函数图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa299pancanSurv",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa299pancanSurv/FigureYa299pancanSurv.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 25328
+        }
+      ],
+      "需求描述": "该模块旨在实现泛癌预后分析，通过Kaplan-Meier和Cox回归方法，展示感兴趣基因表达与多种生存指标（如OS、DSS、DFI、PFI）的相关性，并以热图形式汇总结果，同时单独展示OS的森林图，使内容更立体丰富。",
+      "实用场景": "典型应用包括在泛癌研究中，根据特定基因的表达水平分析其与患者预后的关联，适用于生物医学研究中的基因功能探索和癌症预后评估。",
+      "图片类型": "热图,森林图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa300pancanCor",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa300pancanCor/FigureYa300pancanCor.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16133
+        }
+      ],
+      "需求描述": "该模块用于输入基因名称数据，通过z-score计算得分，并绘制图形展示该得分与不同癌症类型中表型（如致癌通路）的相关性。",
+      "实用场景": "典型应用包括在泛癌分析中计算感兴趣得分（如NETs得分），并评估其与多种致癌通路（如血管生成、EMT、细胞周期）的相关性，适用于生物医学研究中的数据可视化。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa301scCoExpr",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa301scCoExpr/FigureYa301scCoExpr.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9189
+        }
+      ],
+      "需求描述": "该模块用于展示单细胞的基因共表达，通过两种颜色映射两个基因的表达量，合并显示类似免疫荧光实验的合并效果，颜色为渐变色以反映连续表达水平。",
+      "实用场景": "典型应用包括在单细胞RNA测序数据分析中，可视化基因共表达模式及其相关性，例如在癌症相关成纤维细胞中分析THBS2和FAP的共表达。",
+      "图片类型": "UMAP图,散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa302NTPPAM",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa302NTPPAM/FigureYa302NTPPAM.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9243
+        }
+      ],
+      "需求描述": "该模块旨在识别分子亚型中的特异性标记物，并使用NTP算法预测外部数据的亚型，基于PAM算法进行基因筛选以提高准确性。",
+      "实用场景": "典型应用于生物医学研究，如结直肠癌等疾病的分子亚型分析，通过构建模板进行亚型预测，提升研究效率。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa303panCircos",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa303panCircos/FigureYa303panCircos.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 16135
+        }
+      ],
+      "需求描述": "该模块用于绘制基于组织类别和特定评分的弦图，以可视化泛癌数据中的细胞衰老评分或其他连续变量。",
+      "实用场景": "典型应用包括在泛癌研究中展示不同癌症类型的平均细胞衰老评分，或用于其他生物医学数据的环形可视化，如配体-受体相互作用、聚类分析等。",
+      "图片类型": "环形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa304MAGIC",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa304MAGIC/FigureYa304MAGIC.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9707
+        }
+      ],
+      "需求描述": "该模块旨在使用MAGIC-knnDREMI方法计算与特定基因（如PLCG2）协同表达的基因模块，以识别单细胞数据中的基因共表达关系。它解决了在单细胞RNA测序数据中量化基因间相互作用和发现功能模块的需求。",
+      "实用场景": "典型应用包括在单细胞数据分析中识别时序变化基因、度量基因间关系，例如在癌症研究（如SCLC亚型分析）中探索基因表达模式。适用于需要可视化基因模块与细胞状态关联的生物医学研究场景。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa305PMAPscore",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa305PMAPscore/FigureYa305PMAPscore.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 9855
+        }
+      ],
+      "需求描述": "该模块旨在扩展PMAPscore的计算范围，从原有的120+个信号通路增加到包含所有KEGG通路（200+个），以支持全外显子测序（WES）数据中代谢等相关基因的突变分析。",
+      "实用场景": "典型应用包括生物医学研究中基于突变数据的通路富集分析，例如在癌症基因组学中评估患者预后风险或识别关键信号通路。",
+      "图片类型": "生存曲线,ROC曲线,热图,OncoPlot",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa306slingshot",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa306slingshot/FigureYa306slingshot.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8283
+        }
+      ],
+      "需求描述": "该模块旨在利用slingshot工具进行单细胞RNA测序数据的拟时序分析，并绘制特定基因在推断轨迹上的表达变化图。用户希望替代monocle方法，尝试slingshot以实现更优的视觉效果。",
+      "实用场景": "适用于生物医学研究中单细胞数据的轨迹推断，如分析细胞分化过程中的基因表达动态。典型应用包括比较不同工具（如slingshot与monocle）的绘图效果，以支持数据解释和论文发表。",
+      "图片类型": "热图,密度分布图,平滑曲线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa307CNVHeatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa307CNVHeatmap/FigureYa307CNVHeatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10733
+        }
+      ],
+      "需求描述": "该模块旨在绘制拷贝数变异（CNV）的图形，以可视化基因组中的增益和缺失情况，帮助用户分析CNV数据。",
+      "实用场景": "典型应用包括利用GISTIC算法的输出文件绘制CNV热图，适用于生物医学研究中的基因组数据分析，如TCGA数据集的CNV景观可视化。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa308IHS",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa308IHS/FigureYa308IHS.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 13873
+        }
+      ],
+      "需求描述": "该模块旨在实现文献中Figure 5D的绘制，通过weighted VIPER方法推断检查点蛋白活性，并计算其异质性分数（IHS），以评估患者内肿瘤异质性。该方法可扩展用于计算其他类型蛋白的异质性。",
+      "实用场景": "典型应用于生物医学研究，如分析肿瘤样本中免疫检查点蛋白的异质性，帮助评估肿瘤微环境的复杂性。适用于需要量化蛋白活性变异的研究场景。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa309cell2location",
+      "docs": [
+        {
+          "type": "ipynb",
+          "file": "FigureYa309cell2location/01_explore_space_transcriptome.ipynb",
+          "title": "01_explore_space_transcriptome",
+          "size_bytes": 326543
+        }
+      ],
+      "需求描述": "该模块旨在解决切片图像与转录组数据标识不一致的问题，确保数据结构的匹配性，以便正确使用select_slide函数进行切片子集选择。",
+      "实用场景": "适用于空间转录组数据分析中，当需要根据样本标识对多个切片数据进行子集操作时，确保数据一致性。",
+      "图片类型": "空间转录组图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa310CPDBChordGramV2",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa310CPDBChordGramV2/FigureYa310CPDBChordGramV2.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 15155
+        }
+      ],
+      "需求描述": "该模块以CellPhoneDB的结果文件作为输入，生成细胞间通讯的弦图，用于可视化配体-受体相互作用。",
+      "实用场景": "适用于比较两组样本（如STIM与CTRL）的配体-受体差异，典型应用于单细胞数据分析中的细胞通讯研究。",
+      "图片类型": "弦图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa311PAM50Heatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa311PAM50Heatmap/FigureYa311PAM50Heatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10408
+        }
+      ],
+      "需求描述": "该模块基于改良的PAM50乳腺癌分子分型方法，通过移除Her2和Normal样本，将分类限制为LumA、LumB和Basal亚型，并比较这些亚型在雄激素受体、神经内分泌得分、CCP、FGF-MEK签名及神经内分泌前列腺癌表型间的差异。",
+      "实用场景": "适用于生物医学研究中，当需要分析乳腺癌或前列腺癌等肿瘤的分子亚型与特定基因签名或表型关联时，可灵活调整PAM50分型以聚焦特定亚型。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa312CellPreference",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa312CellPreference/FigureYa312CellPreference.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 6687
+        }
+      ],
+      "需求描述": "该模块旨在复现细胞偏好性（Ro/e评分）的计算，并重现相关论文中的热图（如Fig3c），用于展示各细胞类型在不同组织中的富集程度。",
+      "实用场景": "适用于单细胞RNA测序数据分析，计算细胞类型在组织样本中的分布偏好性，常见于生物医学研究如肿瘤免疫细胞表征。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa313CircularPlot",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa313CircularPlot/FigureYa313CircularPlot.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 6854
+        }
+      ],
+      "需求描述": "该模块用于创建圆圈图，对比两个群体的数值分布，无需一一对应关系。通过圆圈形式展示数据点的角度和距离，便于可视化比较。",
+      "实用场景": "典型应用包括生物医学数据中免疫表型评分的对比，如特定样本与数据库样本的免疫活性评分比较。适用于需要环形布局展示分组数据的场景。",
+      "图片类型": "环形图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa314SingleRScore",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa314SingleRScore/FigureYa314SingleRScore.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10072
+        }
+      ],
+      "需求描述": "该模块旨在实现FigureS5B的计算公式，用于基于三个cDC亚群特征基因评分对树突状细胞转录组进行分层。",
+      "实用场景": "典型应用于验证LAMP3+ cDCs可能从cDC1和cDC2分化而来的假设，在多种癌症类型中通过直接分层分析证实细胞起源。",
+      "图片类型": "散点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa315SingleRFraction",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa315SingleRFraction/FigureYa315SingleRFraction.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10550
+        }
+      ],
+      "需求描述": "该模块旨在使用SingleR工具预测单细胞数据中不同细胞亚群之间的相关性，特别是评估特定细胞亚群（如LAMP3+ cDCs）的来源比例。",
+      "实用场景": "典型应用包括在生物医学研究中分析细胞起源，例如计算cDC2来源的LAMP3+ cDC细胞在不同癌症类型中的占比，并可灵活扩展到其他细胞类型。",
+      "图片类型": "箱线图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa316RF_XGBoost_Boruta",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa316RF_XGBoost_Boruta/FigureYa316RF_XGBoost_Boruta.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10685
+        }
+      ],
+      "需求描述": "该模块旨在实现一篇论文中的Figure S2，使用随机森林、XGBoost和Boruta三种机器学习算法筛选生物标志物，以补充现有LASSO和SVM-RFE方法。",
+      "实用场景": "典型应用于生物医学研究，通过多种机器学习算法筛选差异表达基因，特别适合分子分型分析和特征选择。",
+      "图片类型": "误差曲线图,变量重要性图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa317RoeDot",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa317RoeDot/FigureYa317RoeDot.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 8070
+        }
+      ],
+      "需求描述": "基于Ro/e分析对细胞亚群进行组织富集分析，揭示肥大细胞和髓系细胞优先分布在动脉粥样硬化核心部位，而淋巴细胞优先分布在邻近部位。",
+      "实用场景": "根据单细胞数据计算细胞比例分布特异度（Ro/e），并绘制折线图，输入为Seurat对象，输出折线图和Ro/e表格。",
+      "图片类型": "折线图,热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa318GenesetDEDotplot",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa318GenesetDEDotplot/FigureYa318GenesetDEDotplot.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10942
+        }
+      ],
+      "需求描述": "该模块用于计算单细胞数据中70多条代谢通路与其他基因集的相关性，并生成差异分析点图。具体解决如何可视化不同细胞类型中两组间通路活性得分的差异问题。",
+      "实用场景": "典型应用包括基于单细胞RNA测序数据，分析动脉粥样硬化等疾病中免疫细胞类型的通路富集差异。适用于生物医学研究，比较不同组织或条件下的通路活性变化。",
+      "图片类型": "点图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa319ContribScore",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa319ContribScore/FigureYa319ContribScore.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 10600
+        }
+      ],
+      "需求描述": "该模块旨在计算单细胞数据中细胞亚群对疾病的贡献度，识别最重要的细胞亚群，并绘制相应的可视化图形。",
+      "实用场景": "适用于分析单细胞RNA测序数据，如评估心肌梗死模型中巨噬细胞亚群对疾病进展的贡献，典型应用包括生物医学研究中的细胞功能分析。",
+      "图片类型": "环形柱状图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa320ClontypeHeatmap",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa320ClontypeHeatmap/FigureYa320ClontypeHeatmap.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 6526
+        }
+      ],
+      "需求描述": "该模块用于生成不同细胞类型间共享克隆型的热图，展示克隆型在细胞类型间的分布情况，颜色表示共享克隆型的对数值。",
+      "实用场景": "典型应用于评估T细胞受体（TCR）分析中克隆型在各细胞亚群间的共享程度，常用于免疫学研究，如分析终末耗竭T细胞的克隆多样性。",
+      "图片类型": "热图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa321volcanoSE",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa321volcanoSE/FigureYa321volcanoSE.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 6998
+        }
+      ],
+      "需求描述": "该模块用于在癌症中高低风险组之间进行差异APA分析，并通过火山图展示PDUI差异，以可视化基因表达变化。",
+      "实用场景": "典型应用于TCGA癌症数据（如PAAD）的差异分析，可扩展至其他癌症类型，使用火山图直观呈现结果。",
+      "图片类型": "火山图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa322SSEA",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa322SSEA/FigureYa322SSEA.Rmd",
+          "title": "Academic Citation",
+          "size_bytes": 7602
+        }
+      ],
+      "需求描述": "该模块旨在复现SSEA算法，帮助用户学习计算流程，无数据限制。",
+      "实用场景": "适用于计算通路亚型富集得分并绘制雷达图，适合同时展示多组数据的多个特征，如单数据集多特征或多数据集单特征。",
+      "图片类型": "雷达图",
+      "llm_status": "ok"
+    },
+    {
+      "module": "FigureYa323STpathseq",
+      "docs": [
+        {
+          "type": "rmd",
+          "file": "FigureYa323STpathseq/FigureYa323STpathseq.Rmd",
+          "title": "需求描述",
+          "size_bytes": 7661
+        }
+      ],
+      "需求描述": "该模块通过pathseq分析空间转录组数据，提取微生物UMI信息，并可视化其空间分布。",
+      "实用场景": "适用于分析空间转录组测序文件中的微生物组信息，但需要样本满足特定条件，如高内存和存储要求。",
+      "图片类型": "空间分布图,饼图",
+      "llm_status": "ok"
+    }
+  ]
+}

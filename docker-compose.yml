@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  figureya-recommend:
+    build: .
+    image: figureya-recommend:latest
+    container_name: figureya-recommend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - GIN_MODE=release
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - BASE_URL=${BASE_URL:-https://api.openai.com}
+      - MODEL=${MODEL:-gpt-3.5-turbo}
+      - PROVIDER=${PROVIDER:-openai}
+    volumes:
+      # Optional: mount config file if you want to update without rebuilding
+      - ./.env:/app/.env:ro
+      # Optional: mount data file for updates
+      - ./figureya_docs_llm.json:/figureya_docs_llm.json:ro
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:8080/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - figureya-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.figureya.rule=Host(`figureya.local`)"
+      - "traefik.http.routers.figureya.entrypoints=web"
+      - "traefik.http.services.figureya.loadbalancer.server.port=8080"
+
+  # Optional: Add nginx for SSL and caching
+  nginx:
+    image: nginx:alpine
+    container_name: figureya-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - figureya-recommend
+    networks:
+      - figureya-network
+    profiles:
+      - production  # Only start with: docker-compose --profile production up
+
+networks:
+  figureya-network:
+    driver: bridge
+
+# For development with external databases or services
+volumes:
+  figureya-data:
+    driver: local

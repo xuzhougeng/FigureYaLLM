@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FigureYa 图表推荐</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <span class="logo">📊</span>
+                FigureYa 图表推荐
+            </h1>
+            <p class="subtitle">基于AI的生物医学数据可视化模块推荐系统</p>
+        </header>
+
+        <main class="main">
+            <div class="search-section">
+                <form class="search-form" id="searchForm">
+                    <div class="search-container">
+                        <input
+                            type="text"
+                            id="searchInput"
+                            class="search-input"
+                            placeholder="描述您需要绘制的图表类型，例如：我想绘制生存曲线图..."
+                            required
+                        >
+                        <button type="submit" class="search-button" id="searchButton">
+                            <span class="button-text">Ask</span>
+                            <span class="loading-spinner" id="loadingSpinner">⚡</span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="suggestions">
+                    <p class="suggestions-title">试试这些示例：</p>
+                    <div class="suggestion-tags">
+                        <span class="tag" onclick="fillSearch('我想绘制生存曲线图')">生存曲线</span>
+                        <span class="tag" onclick="fillSearch('需要做RNA-seq差异表达基因的火山图')">火山图</span>
+                        <span class="tag" onclick="fillSearch('想看两个基因表达量的相关性')">相关性分析</span>
+                        <span class="tag" onclick="fillSearch('如何制作热图展示基因表达')">热图</span>
+                        <span class="tag" onclick="fillSearch('我要画箱线图比较不同组的数据')">箱线图</span>
+                        <span class="tag" onclick="fillSearch('需要绘制PCA主成分分析图')">PCA分析</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-header">
+                    <h2>推荐结果</h2>
+                    <div class="query-display" id="queryDisplay"></div>
+                </div>
+
+                <div class="explanation" id="explanation"></div>
+
+                <div class="recommendations-grid" id="recommendationsGrid">
+                    <!-- 推荐卡片将在这里动态生成 -->
+                </div>
+            </div>
+
+            <div class="error-section" id="errorSection" style="display: none;">
+                <div class="error-message">
+                    <h3>🚫 出现错误</h3>
+                    <p id="errorMessage"></p>
+                    <button class="retry-button" onclick="location.reload()">重新尝试</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>
+                <a href="/health" target="_blank">系统状态</a> |
+                <a href="/modules" target="_blank">所有模块</a> |
+                <a href="https://github.com/anthropics/claude-code" target="_blank">项目源码</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
