@@ -3,10 +3,10 @@
 基于LLM的图表模块推荐系统，使用Go语言开发，支持OpenAI-compatible API协议。
 
 > If you use this code in your work or research, in addition to complying with the license, we kindly request that you cite our publication:
-
 > Xiaofan Lu, et al. (2025). FigureYa: A Standardized Visualization Framework for Enhancing Biomedical Data Interpretation and Research Efficiency. iMetaMed. https://doi.org/10.1002/imm3.70005
 
 
+Visit <https://rvctmxhcmykh.sealosbja.site> for fun!
 
 ## 功能特性
 
